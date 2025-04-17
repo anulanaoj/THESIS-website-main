@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Interaction with</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Updated styles moved to external file -->
+   <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Schoolbook', serif;
+    background-color: lch(100% 0.01 296.81);
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Header styles */
+.header {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100vw;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-size: 2em;
+    font-weight: 400;
+    color: #1700e1;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    transform: translateX(-50%);
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Container-Four Styling */
+.container-four {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    background-color: lch(73.82% 44.98 182.07);
+    max-width: 100vw;
+    height: 100vh;
+}
+
+/* Text Column */
+.text-column {
+    flex: 1;
+    padding: 20px;
+    color: #081804;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Slideshow Column */
+.slideshow-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+</style>
+    <script>
+        // Add touch support for mobile devices
+        document.addEventListener('DOMContentLoaded', function () {
+            const hoverText = document.getElementById('hover-text');
+            const hoverImage = document.getElementById('hover-image');
+
+            // Toggle image visibility on touch
+            hoverText.addEventListener('touchstart', function (e) {
+                e.preventDefault(); // Prevent default touch behavior
+                if (hoverImage.style.display === 'block') {
+                    hoverImage.style.display = 'none';
+                } else {
+                    hoverImage.style.display = 'block';
+                }
+            });
+
+            // Hide the image when touching outside the paragraph
+            document.addEventListener('touchstart', function (e) {
+                if (!hoverText.contains(e.target) && !hoverImage.contains(e.target)) {
+                    hoverImage.style.display = 'none';
+                }
+            });
+        });
+
+        // Slideshow functionality
+        let slideIndex = 0;
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', showSlides);
+
+        // Slideshow navigation
+        function plusSlides(step) {
+            slideIndex += step;
+            const slides = document.getElementsByClassName("mySlides");
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>3. Interaction with</h1>
+        <img src="3/IMG_0484.jpg" alt="Landscape background" loading="lazy">
+    </div>
+
+    <!-- Text and Image Section -->
+    <div class="container-one">
+        <p id="hover-text">
+            Landscape is a selected area—objectified—of land that one looks at, not something, by designation, that one is part of...
+        </p>
+        <img id="hover-image" src="3/PXL_20240727_173826963.jpg" alt="Interaction example" loading="lazy">
+    </div>
+
+    <div class="container-two">
+        <p>I think out loud with painted lines on the ground, for their immediate appearance as lines and their proportion to our shared scale...</p>
+        <img src="3/I think out loud with lines in the ground.jpg" alt="applying formal visual exercises as interactions with the world" loading="lazy">
+    </div>
+
+    <div class="container-three">
+        <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself...</p>
+        <img src="3/some_image.jpg" alt="Interaction example" loading="lazy">
+    </div>
+
+    <!-- Updated Container-Four Section -->
+    <div class="container-four">
+        <!-- Text Column -->
+        <div class="text-column">
+            <p>
+                Every phenomenon can be experienced in two ways. These two ways are not arbitrary, but are bound up with the phenomenon—developing out of its nature and characteristics:<br/>
+                Externally—or—inwardly.<br/>
+                The street can be observed through the windowpane, which diminishes its sounds so that its movements become phantom-like. The street itself, as seen through the transparent (yet hard and firm) pane seems set apart, existing and pulsating as if "beyond."<br/>
+                As soon as we open the door, step out of the seclusion and plunge into the outside reality, we become an active part of this reality and experience its pulsation with all our senses. The constantly changing grades of tonality and tempo of the sounds wind themselves about us, rise spirally and, suddenly, collapse. Likewise, the movements envelop us by a play of horizontal and vertical lines bending in different directions, as colour patches pile up and dissolve into high or low tonalities.” P.17 POPUP KANDINSKY
+            </p>
+        </div>
+
+        <!-- Slideshow Column -->
+        <div class="slideshow-column">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="3/IMG_20250130_194445.jpg" alt="Slideshow image 1" loading="lazy">
+                </div>
+                <div class="mySlides fade">
+                    <img src="3/IMG_20250130_194612.jpg" alt="Slideshow image 2" loading="lazy">
+                </div>
+                <div class="mySlides fade">
+                    <img src="3/IMG_20250130_194642.jpg" alt="Slideshow image 3" loading="lazy">
+                </div>
+
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
