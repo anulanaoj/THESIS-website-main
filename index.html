@@ -19,40 +19,61 @@
             overflow-x: hidden;
             height: 100%; /* Ensure the body takes the full height of the viewport */
             display: flex; /* Enable flexbox */
-            justify-content: top; /* Center horizontally */
-            align-items: left; /* Center vertically */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: flex-start; /* Align items to the top */
+            align-items: left; /* Center horizontally */
+        }
+
+        .h1 {
+            position: absolute; /* Position the heading */
+            font-size: 5em; /* Adjust font size */
+            text-align: left; /* Center the heading */
+            color: #760c00c6; /* Heading color */
+            padding-top: 5%; /* Space above the heading */
+            padding-left: 70%;
+
         }
 
         .container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            padding: 0;
-            max-width: 100vw;
-            max-height: 100vh;
-            margin: 0; /* Remove auto-centering */
-            line-height: 1.6;
+            display: flex;
+            flex-direction: row; /* Stack items vertically */
+            justify-content: flex-start; /* Align items to the top */
+            padding: 0px; /* Add some padding */
+            padding-left: 0%; /* Add left padding */
+            width: 100%; /* Adjust width of each container */
+            box-sizing: border-box; /* Include padding in width */
         }
 
+        .container img {
+            max-width: auto; /* Make images responsive */
+            max-height: 90vh; /* Maintain aspect ratio */
+            margin-top: 0px; /* Add some space above the image */
+            z-index: 1;
+        }
         .container p {
+            position: absolute; /* Position the text */
             margin-bottom: 0.5em; /* Space between paragraphs */
             font-size: 1em; /* Adjust font size for better readability */
-            text-align: left; /* Justify text for a cleaner look */
+            text-align: left; /* Align text to the left */
             color: rgb(0, 0, 0);
-            padding-left: 5%;
-            padding-bottom: 10%;
-            align-items: left;
-            text-align: right;
-
+            z-index: 2;
+            padding-left: 75%;
+            padding-top: 15%;
         }
     </style>
-
-        
-            
-        </style>
     </head>
     <body>
+        <div class="container">
+        <div class="h1">On Touch,</div>
+        
+            <p> 
+                <a href="chapters.html" style="text-decoration: none; color: #760c00c6;" 
+                onmouseover="this.style.color='black';" 
+                onmouseout="this.style.color='#760c00c6';">Chapters</a>
+            </p>
+            <img src="indexpng.png" alt="">
+            <img src="indexpng1.png" alt="">
+        </div>
         
     </body>
 </html>
