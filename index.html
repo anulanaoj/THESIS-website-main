@@ -6,70 +6,53 @@
         <link rel="stylesheet" href="style.css">
        
         <style>
-            body {
-                margin: 0; /* Remove default margin */
-            }
+             * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            .container {
-                width: 100%;
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-                background-color: #af2222;
-                background-image: url('04.03.25-1.jpg'); /* Replace '04.03.25-1.jpg' with the correct path to your image */
-                background-size: cover; /* Ensures the image covers the entire container */
-                background-position: center; /* Centers the image */
-                background-repeat: no-repeat; /* Prevents the image from repeating */
-                display: flex;
-                align-items: center;
-                justify-content: left;
-                color: rgb(39, 33, 33); /* Adjust text color as needed */
-                text-align: center;
-            }
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Century Schoolbook', serif;
+            overflow-x: hidden;
+            height: 100%; /* Ensure the body takes the full height of the viewport */
+            display: flex; /* Enable flexbox */
+            justify-content: top; /* Center horizontally */
+            align-items: left; /* Center vertically */
+        }
 
-        button {
+        .container {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            color: #af2222;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            margin: 0; /* Remove auto-centering */
+            line-height: 1.6;
         }
 
-        button:hover {
-            background-color: #af4444;
-            color: #ffffff;
+        .container p {
+            margin-bottom: 0.5em; /* Space between paragraphs */
+            font-size: 1em; /* Adjust font size for better readability */
+            text-align: left; /* Justify text for a cleaner look */
+            color: rgb(0, 0, 0);
+            padding-left: 5%;
+            padding-bottom: 10%;
+            align-items: left;
+            text-align: right;
+
         }
+    </style>
+
+        
             
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class = "container text">
-                <a href="toca-me toco-te.html" style="text-decoration: none; color: inherit; position: absolute; top: 50px; left: 1000px;" onmouseover="showImage(this)" onmouseout="hideImage(this)">
-                    toca-me toco-te
-                    <img src="IMG_0987.jpg" style="display: none; position: absolute; top: 20px; left: 0; width: 100px; height: 200px;" />
-                </a>
-
-                <script>
-                    function showImage(link) {
-                        const img = link.querySelector('img');
-                        img.style.display = 'block';
-                    }
-
-                    function hideImage(link) {
-                        const img = link.querySelector('img');
-                        img.style.display = 'none';
-                    }
-                </script>
-                
-
-        </div>
-        <button onclick="window.location.href='1.thegrassfield.html';">Go to Page</button>
+        
     </body>
 </html>
