@@ -45,6 +45,24 @@
             text-align: right;
 
         }
+        .footer {
+            background-color: #ffffff;
+            text-align: right;
+            padding: 0%;
+            position: relative; /* Change to relative to avoid overlap */
+            width: auto;
+            bottom: 0;
+            max-height: 5vh; /* Allow the height to adjust to content */
+            margin-top: 20px; /* Add space above the footer */
+            padding-right: 5%;
+            padding-bottom: 5%;
+        }
+        .footer img {
+            width: auto; /* Adjust the size of the image as needed */
+            height: 5vh; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align the image vertically with the text */
+            margin-right: 10px; /* Add space between the image and text */
+        }
     </style>
 </head>
 <body>
@@ -103,5 +121,14 @@
             <br>delusional as it may,<br>
         </p>
     </div>
+    <div class="footer">
+        <a href="2.Humidity.html" 
+        style="text-decoration: none; color: black;" 
+        onmouseover="this.style.color='white';" 
+        onmouseout="this.style.color='black';">
+        <img src="next button page.jpg" alt="Footer Image">
+     </a>
+        
+      </div>
     </body>
 </html>

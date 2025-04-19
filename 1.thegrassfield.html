@@ -3,106 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1. The grass field</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>1.thegrassfield</title>
     <style>
-        body {
-            margin: 0; /* Remove default margin */
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-    h1 {
-        font-size: 50px;
-        font-family: Century Schoolbook;
-        font-weight: 400;
-        color: #48A62E;
-        text-align: justify;
-        position: fixed;
-        left: 249px;
-        top: 10px;
-    }
-    
-    
-    .column {
-        position: absolute;
-        color: #226510;
-        font-size: 32px;
-        font-family: Century Schoolbook;
-        font-weight: 400;
-        word-wrap: break-word;
-        width: 940px;
-        height: 3522px;
-        left: 242px;
-        top: 170px;
-        text-align: justify;
-        z-index: 2;
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100%; /* Ensure the body takes up the full height */
+            font-family: 'Century Schoolbook', serif;
+            box-sizing: border-box;
+            padding-left:10% ;
+            display: block;
+            
+        }
 
+        .spacing {
+            position: relative;
+            height: 20vh;
+            width: 100vw; /* Adjust the height as needed */
+            background-color: lch(100% 0.01 296.81);
+        }
+        .h1 {
+            font-size: 2em;
+            color: #000000;
+            text-decoration: none;
+            text-align: left;
+            padding-left: 0%;
+            margin-top: 02%;
+            z-index: 2;
+            position: relative; /* Change to relative to avoid overlap */
+            height: auto; /* Allow the height to adjust to content */
+            width: 100%;
+            padding-bottom: 5% ;
+            
+        }
         
-    }
-    img {
-       position: absolute;
-       left: 0px;
-       width: 949px;
-       z-index: -1; /* Set z-index to -1 to position the image behind the text */
-       border-radius: 0px;
-    
-    }
-    
-    span {
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack the image and text vertically */
+            align-items: flex-start; /* Align items to the left */
+            max-width: 50%; /* Limit the width of the container */
+            margin: 0; /* Remove centering */
+            padding: 0; /* Ensure no extra padding */
+        }
+        
+        .container p {
+            font-size: 1em;
+            color: #333;
+            text-align: justify;
+            width: 100%; /* Match the width of the image */
+            
+        }
+
+        .image1 {
+            position: relative;
+            display: flex;
+            max-width: 50%;
+            height: auto;
+            margin-top: 0; /* Keeps the top margin at 0 */
+            padding-left: 0; /* No padding on the left */
+            margin-left: 0; /* Aligns the image to the left */
+            
+        }
+        .image1 img {
+            width: 100%; /* Make the image take up the full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add spacing between the image and text */
+            display: flex;
+            position: relative;
+            margin: 0;
+            padding: 0%;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
+            overflow: hidden; /* Hides any part of the image outside the container */
+            z-index: 1;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+        }
+        .footer {
+            background-color: #ffffff;
+            text-align: right;
+            padding: 0%;
+            position: relative; /* Change to relative to avoid overlap */
+            width: auto;
+            bottom: 0;
+            max-height: 5vh; /* Allow the height to adjust to content */
+            margin-top: 20px; /* Add space above the footer */
+            padding-right: 5%;
+            padding-bottom: 5%;
+        }
+        .footer img {
+            width: auto; /* Adjust the size of the image as needed */
+            height: 5vh; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align the image vertically with the text */
+            margin-right: 10px; /* Add space between the image and text */
+        }
+        span {
         position: relative; /* Make the span the reference point for the popup */
         cursor: pointer; /* Change the mouse cursor to a pointer */
     }
     
-    .popup {
-        display: none; /* Initially hide the popup */
-        position: absolute; /* Position the popup relative to the span */
-        top: -30px; /* Adjust to position the popup above the text */
-        left: 0; /* Align the popup with the text */
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 10px;
-        font-size: 14px;
-        color: #000;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-        white-space: wrap;
-        width: 200px; /* Set a fixed width for the popup */
-    }
-
-    span:hover .popup {
-        display: block; /* Show the popup when hovering over the text */
-    }
-
+    .hover-box {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .hover-trigger:hover .hover-box {
+            display: block;
+            }
+            .hover-trigger {
+            position: relative;
+            display: inline-block;
+            }
+            .hover-box {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .hover-text:hover + .hover-box {
+            display: block;
+            }
     </style>
 </head>
 <body>  
-    <h1>
-        <a href="1.1.thegrassfield.html" style="text-decoration: none; color: #48A62E;" 
-           onmouseover="this.style.color='yellow';" 
-           onmouseout="this.style.color='#48A62E';">
-           1.The grass field.
-        </a>
-    </h1>
-    <div class="column">
-      With friends in a green car, moving through <span style="color: #6BAF5E;">green relvados<span class="popup">green fields</span></span>, <span style="color: black;">parting green<span class="popup">[2] “It is from this lawn before me that I think I catch sight of the impact of the green on the vision of another.” P.11 (The Visible and the Invisible, M.P)</span></span>. Coming from Caldeira Velha, hot springs, once private, now on reservation and crowded. One body becomes many, dots for heads, sticks for arms. We move slow, on our way to eat <span style="position: relative; cursor: pointer; color: black;">fresh seafood
-        <img src="1/PXL_20241228_191442106.jpg" alt="Fresh seafood" style="display: none; position: absolute; top: -150px; left: 0; width: 150px; height: 200px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border: 1px solid #ccc;">
-    </span>. Fish soup for four people, three euro, yes. We move slow, able to see without the usual dragging of eyes fast, from corner to corner.<span style="position: relative; cursor: pointer; color: black;"> Reminded of parts
-        <img src="1/PXL_20241219_155209260~2.jpg" alt="cows" style="display: none; position: absolute; top: -150px; left: 0; width: 150px; height: 200px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border: 1px solid #ccc;">
-    </span>when seeing cows munching the postcards. Black and white animals hugged by grass, shy and curious they are.<br><br>  The car had stopped, I believe some soundtrack was to change. I recommend you to leave the car when it is stopped. I did so, company stayed. The field next to us was an empty one, empty postcard to be sent. I’ll go in turn of the cow. I am not shy but curious to take the place. Gave my camera, a pocket one, to my friend in the backseat, still seated, looking from behind the open window, inside.<br/><br/>  Running uneasily through the field, humidity made the green greener – possibility to slip is eminent – and stopped, informed by the image of my body being a small element inside the square photograph. This within imagination.<br/><br/><br/><br/><br/><br><br><br>  Once there, stayed with my back turned to the car. Not to remember where I had come from. Assuming this position, I turn from the lens to the landscape that brought me in to begin with. Once you reach the landscape, its whole is separated into parts. Ones as you are. The mountains were closer, but still further than an arms distance. Not to touch, to see. I understood their shape as my own.<br/>  They are tall from where they look, but short from where I do. I became lower, can I appear through the grass as the mountains are covered with trees at their bottom? Only when coming closer you are under the tree<br/>  Stood up to hunch the spine. I imitate their round tops, I go along with the play with the horizon. Not flat. Again, I am you. And I move, unsure if the outline of my back will match that of the mountains, but having the sensation so.<br/>  Lastly, to form with my body formal disruption to the images, I went with my arms up, perpendicular to the horizon, arms copying the upright position of the torso. Stand up with your arms. Glue yourself to the world.<br/>  In this scenario, I play as so to enter this place, mine, and yours. And I do so to enter and be welcomed. I go there, I mimic and I counterpose, stapling through tension points.<br/><br/><br/>  The actions were a mix of instinct influenced by what I rationalized to be the eye of the beholder, my friend and the camera she held. But this eye that is far sees not what I see from the inherent first person perspective. I do not see me as I do not see the bottom of the far away trees, which the camera doesn’t see the tops of. I don’t see but I act. Sight is limited to the space inside my eyes, limited to my own movement.<br/>  When lower, I see the below what I do when I stand. When the neck is upright I see all which surrounds me, I see the whole. The opposite when I crouch with a guarded head, I see my interior space, the body which is a part, as its own environment. I see then the dark tone of my clothing and the grass poking through it, touching my ankles. Movement is, in this closed position, informed by the memory of what I saw when in an open position<br/><br/>  Seeing the images after taking the movement, it is clear what was in my sight is not what was in the camera’s. There is distinction between the first and third person sights. The mountains I described are not visible with a different perspective than mine. What has influenced the movement acted was unseeable – this made my body a prominent element of the scene, certainly detectable.<br/>  Coincidences as the hands becoming trees and the body a stone where they grow from. The attempts at being perpendicular so to join the landscape I feel are successful. It is the tension points that confirm my being in, in relation to the land. They glue me to the world and make me part of it. Small movements mimic those of the grass moving with the wind. My movements affected by the grass affected by the wind. I see as I look at the images, an attempt to not be recognized as a body, I want to camouflage myself with the surroundings. The way of doing so, my own instinct I find funny, to curl the body as a stone, make my torso be my body as if I was immovable, grabbable and coming from having fallen off of some cliff, with fear my limbs will give my humanity away.<br/><br/>
-
-<script>
-    document.querySelectorAll('span[style*="cursor: pointer;"]').forEach(function(span) {
-        span.addEventListener('mouseover', function() {
-            this.querySelector('img').style.display = 'block';
-        });
-        span.addEventListener('mouseout', function() {
-            this.querySelector('img').style.display = 'none';
-        });
-    });
-</script>
-    <img style=" top: 590px; height: 480px;" src="1/1.field-02.jpg" alt="Description of the image">
-    <img style=" top: 2700px; height: 700px;"src="1\1.field-01.jpg" />
+    
+    <div class="container">
+        <div class="h1">
+            <a href="1.1.thegrassfield.html" 
+               style="text-decoration: none; color: black;" 
+               onmouseover="this.style.color='white';" 
+               onmouseout="this.style.color='black';">
+               1. the grass field
+            </a>
+        </div>
+        <br>
+        <br>
+        <p>With friends in a green car, moving through <span style="color: #6BAF5E;" class="hover-trigger">green relvados
+            <span class="hover-box">green fields</span>
+        </span>, <span style="color: black;" class="hover-trigger">parting green
+            <span class="hover-box">[2] “It is from this lawn before me that I think I catch sight of the impact of the green on the vision of another.” P.11 (The Visible and the Invisible, M.P)</span>
+        </span>. Coming from Caldeira Velha, hot springs, once private, now on reservation and crowded. One body becomes many, dots for heads, sticks for arms. We move slow, on our way to eat <span style="position: relative; cursor: pointer; color: black;" class="hover-trigger">fresh seafood
+            <span class="hover-box">
+                <img src="1/PXL_20241228_191442106.jpg" alt="Fresh seafood" style="width: 150px; height: 200px;">
+            </span>
+        </span>. Fish soup for four people, three euro, yes. We move slow, able to see without the usual dragging of eyes fast, from corner to corner.<span style="position: relative; cursor: pointer; color: black;" class="hover-trigger"> Reminded of parts
+            <span class="hover-box">
+                <img src="1/PXL_20241219_155209260~2.jpg" alt="cows" style="width: 150px; height: 200px;">
+            </span>
+        </span>when seeing cows munching the postcards. Black and white animals hugged by grass, shy and curious they are.<br>
+        <br> The car had stopped, I believe some soundtrack was to change. I recommend you to leave the car when it is stopped. I did so, company stayed. The field next to us was an empty one, empty postcard to be sent. I’ll go in turn of the cow. I am not shy but curious to take the place. Gave my camera, a pocket one, to my friend in the backseat, still seated, looking from behind the open window, inside.<br/>
+        <br/></p>
+        </div>
+        <br>
+        <br>
+        <br>
+            <div class ="image1">
+                <img src="1/1.field-02.jpg" alt="">
+                </div>
+            <div class="spacing"></div>
+        <div class="container">
+        <p>  Running uneasily through the field, humidity made the green greener – possibility to slip is eminent – and stopped, informed by the image of my body being a small element inside the square photograph. This within imagination.<br/><br/><br/><br/><br/><br><br>
+        <br>  Once there, stayed with my back turned to the car. Not to remember where I had come from. Assuming this position, I turn from the lens to the landscape that brought me in to begin with. Once you reach the landscape, its whole is separated into parts. Ones as you are. The mountains were closer, but still further than an arms distance. Not to touch, to see. I understood their shape as my own.<br/>
+        <br> They are tall from where they look, but short from where I do. I became lower, can I appear through the grass as the mountains are covered with trees at their bottom? Only when coming closer you are under the tree<br/>  Stood up to hunch the spine. I imitate their round tops, I go along with the play with the horizon. Not flat. Again, I am you. And I move, unsure if the outline of my back will match that of the mountains, but having the sensation so.<br/>  Lastly, to form with my body formal disruption to the images, I went with my arms up, perpendicular to the horizon, arms copying the upright position of the torso. Stand up with your arms. Glue yourself to the world.<br/>  In this scenario, I play as so to enter this place, mine, and yours. And I do so to enter and be welcomed. I go there, I mimic and I counterpose, stapling through tension points.<br/><br/><br/>  The actions were a mix of instinct influenced by what I rationalized to be the eye of the beholder, my friend and the camera she held. But this eye that is far sees not what I see from the inherent first person perspective. I do not see me as I do not see the bottom of the far away trees, which the camera doesn’t see the tops of. I don’t see but I act. Sight is limited to the space inside my eyes, limited to my own movement.<br/>  When lower, I see the below what I do when I stand. When the neck is upright I see all which surrounds me, I see the whole. The opposite when I crouch with a guarded head, I see my interior space, the body which is a part, as its own environment. I see then the dark tone of my clothing and the grass poking through it, touching my ankles. Movement is, in this closed position, informed by the memory of what I saw when in an open position<br/><br/>  Seeing the images after taking the movement, it is clear what was in my sight is not what was in the camera’s. There is distinction between the first and third person sights. The mountains I described are not visible with a different perspective than mine. What has influenced the movement acted was unseeable – this made my body a prominent element of the scene, certainly detectable.<br/>  Coincidences as the hands becoming trees and the body a stone where they grow from. The attempts at being perpendicular so to join the landscape I feel are successful. It is the tension points that confirm my being in, in relation to the land. They glue me to the world and make me part of it. Small movements mimic those of the grass moving with the wind. My movements affected by the grass affected by the wind. I see as I look at the images, an attempt to not be recognized as a body, I want to camouflage myself with the surroundings. The way of doing so, my own instinct I find funny, to curl the body as a stone, make my torso be my body as if I was immovable, grabbable and coming from having fallen off of some cliff, with fear my limbs will give my humanity away.<br/><br/>
+        </p>
     </div>
-    
-    
-</body>
-</html>
+      <div class="footer">
+        <a href="2.Humidity.html" 
+        style="text-decoration: none; color: black;" 
+        onmouseover="this.style.color='white';" 
+        onmouseout="this.style.color='black';">
+        <img src="next button page.jpg" alt="Footer Image">
+     </a>
+        
+      </div>
+        
+        
+    </body>
+    </html>
+
