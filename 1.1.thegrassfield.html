@@ -8,26 +8,34 @@
     <style>
         body {
             margin: 0; /* Remove default margin */
-            background-color: black;
+            background-color: rgb(197, 207, 198);
+            padding: 0%;
         }
 
-    h1 {
-        font-size: 50px;
+    .h1 {
         font-family: Century Schoolbook;
-        font-weight: 400;
+        text-align: relative;
+        position: relative;
+    }
+    .h1 h1 {
+        font-size: 1em;
+        font-family: Century Schoolbook;
+        font-weight: 50;
         color: #48A62E;
-        text-align: justify;
-        position: fixed;
-        left: 249px;
-        top: 10px;
+        padding-left: 10%;
+        padding-top: 07%;
     }
     
     
     .container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0px;
-        padding: 0px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0%;
+        padding-top: 1%;
+        width: 70%;
+        height: 100%;
+        position: relative;
+        justify-content: center;
 
     }
 
@@ -42,23 +50,33 @@
 </head>
 
 <body>
-    <h1>
-        <a href="2.Humidity.html" style="text-decoration: none; color: #48A62E;" 
-           onmouseover="this.style.color='yellow';" 
+    <div class="h1">
+        <h1><a href="1.thegrassfield.html" style="text-decoration: none; color: #48A62E;" 
+           onmouseover="this.style.color='grey';" 
            onmouseout="this.style.color='#48A62E';">
            1.The grass field.
         </a>
     </h1>
+    </div>
+    <br>
     <div class="container">
-        <img src="1\1.field-04.jpg" alt="Grass Field">
-        <img src="1\1.field-05.jpg" alt="Grass Field">
-        <img src="1\1.field-06.jpg" alt="Grass Field">
+        
         <img src="1\1.field-07.jpg" alt="Grass Field">
         <img src="1\1.field-11.jpg" alt="Grass Field">
         <img src="1\1.field-08.jpg" alt="Grass Field">  
         <img src="1\1.field-09.jpg" alt="Grass field">
-        <img src="1\1.field-10.jpg" alt="Grass Field">
+        
         
         </div>
+    <div class="container">
+
+        <img src="1\1.field-04.jpg" alt="Grass Field">
+        <img src="1\1.field-05.jpg" alt="Grass Field">
+        <img src="1\1.field-06.jpg" alt="Grass Field">
     </div>
+
+
+
+    
 </body>
+</html>
