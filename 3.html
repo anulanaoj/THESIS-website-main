@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3. Interaction with</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to your external stylesheet -->
+        <style>
+            /* General styles */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Century Schoolbook', serif;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            text-align: left;
+            justify-content: left;
+            }
+            
+        
+        .header {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff; /* Dark grey background */
+            color: rgb(71, 133, 24); /* White text */
+            display: flex;
+            align-items: left;
+            
+        }
+        .header h1 {
+            font-size: 3em;
+            text-align: center;
+            margin: 0;
+            z-index: 2;
+            top: 10%;
+            left: 10%;
+            position: absolute;
+            font-weight: 10;
+        }
+        .header img {
+            width: 50vw;
+            height: auto;
+            display:block;
+            position:absolute;
+            z-index: 1;
+            left: 30%;
+            top: 10%;
+            
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            height: 100vh;
+            width: 100vw;
+            background-color: #ffffff; /* Light grey background */
+            border: #000000 solid 1px; /* Light grey border */
+        }
+        .container p {
+            font-size: 0.9em;
+            padding-left: 15%;
+            padding-top: 5%;
+            color: #333; /* Dark grey text */
+            width: 40vw;
+            text-align: justify;
+        }
+        .containerx {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            height: 100vh;
+            width: 100vw;
+            background-color: #ffffff; /* Light grey background */
+            border: #000000 solid 1px; /* Light grey border */
+        }
+        .containerx p {
+            font-size: 0.9em;
+            padding-left: 40%;
+            padding-top: 5%;
+            color: #333; /* Dark grey text */
+            width: 40vw;
+            text-align: justify;
+        }
+        .container img {
+            width: 50vw;
+            height: auto;
+            display:block;
+            position:absolute;
+            z-index: 1;
+            left: 30%;
+            top: 10%;
+        }
+        .footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            background-color: #ffffff; /* Dark grey background */
+            color: rgb(70, 70, 70); /* White text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        span {
+        position: relative; /* Make the span the reference point for the popup */
+        cursor: pointer; /* Change the mouse cursor to a pointer */
+    }
+    
+    .hover-box {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .hover-trigger:hover .hover-box {
+            display: block;
+            }
+            .hover-trigger {
+            position: relative;
+            display: inline-block;
+            }
+            .hover-box {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .hover-text:hover + .hover-box {
+            display: block;
+            }
+        #hover-image {
+            display: none;
+            position: absolute;
+            width: 20vw;
+            height: auto;
+            max-width: 50vw;
+            margin-left: 30vw;
+            margin-top: 20vh;
+            z-index: 10;
+        }
+        /* Show the image when hovering over the paragraph */
+        #hover-text:hover + #hover-image {
+            display: block;
+        }  
+        /* Responsive design for touch screens */
+        @media (max-width: 768px) {
+            #hover-image {
+                width: 80vw; /* Adjust width for smaller screens */
+            }
+        }
+
+        /* Style for the image with the hover-trigger class */
+        .hover-trigger {
+            position: relative; /* Ensures the hover-box is positioned relative to the image */
+            display: inline-block; /* Keeps the image inline */
+            cursor: pointer; /* Changes the cursor to a pointer when hovering */
+        }
+
+        /* Style for the hover-box */
+        .hover-box {
+            display: none; /* Initially hide the hover-box */
+            position: absolute; /* Position it relative to the hover-trigger */
+            top: 50%; /* Position it below the image */
+            left: 50%; /* Center it horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            background-color: #f9f9f9; /* Light background color */
+            border: 1px solid #ccc; /* Add a border */
+            padding: 10px; /* Add padding inside the box */
+            z-index: 10; /* Ensure it appears above other elements */
+            width: 300px; /* Set a fixed width */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        /* Show the hover-box when hovering over the image */
+        .hover-trigger:hover + .hover-box {
+            display: block; /* Make the hover-box visible */
+        }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>3. interaction
+            </h1>
+        <img src="3/IMG_0484.jpg" alt="">
+    </div>
+        <div class="container">
+            <p id="hover-text">
+                Landscape is a selected area—objectified—of land that one looks at, not something, by designation, that one is part of. In the context of a landscape, a postcard, there is distance between person and place; it is a term that differentiates person, looker, from place, look-ee.<br><br>
+            </p>
+            
+                    <img id="hover-image" src="3/PXL_20240727_173826963.jpg" alt="Interaction example">
+                    <p>    
+                Acts of interaction with these settings are meant to facilitate a conscious embodiment of the body itself, in order to take a step inside this landscape. It is by assuming the position of yourself within your borders that they dissipate, and you become welcome to start touching the world. I propose the subject to come nearer to the object surrounding them, on the same plane.<br><br>
+                If you put yourself on a different plane, you can’t touch the original one. We do not walk on nature; we walk in nature. Acts done in the purview of this research, be they done on the island or in the studio, call for this merging of parts. A conciliation of the physical with the felt in efforts to shorten the distance with what is perceived (what is there) and what is felt (what is sensed).<br><br>
+                Applying formal visual exercises as interactions with the world is a method of engaging. Interaction is a way of returning to what is there. This makes things in the world closer to us, as well as allowing for a dialogue with it. You hear what is said to you; you acknowledge and participate. These happenings are opportunities for letting go of any hesitation involving contact with an exterior element. Fear of contact reinforces separation between self and world. To make the external internal, and the internal external, is to practice mutual transformation.
+            </p>
+    
+            <img id="hover-image" src="3/PXL_20240727_173826963.jpg" alt="Interaction example">
+        
+        </div>
+        <div class="container">
+            <p>I think out loud with painted lines on the ground, for their immediate appearance as lines and their proportion to our shared scale, they can be seen as bodies next to ours.<br/>  They delineate space, instruct us on movement. The lines are de comunicação POPUP. The curiosity lies in how this interaction affects our perception of, and movement within space; in how these lines transform the aesthetic of our days. They are often not seen, for it is expected they would be there anyways, but there is rhythm in a cross path. It is a structural visual language built on our behaviour. It is either parallel or perpendicular to intuitive movement. It is parallel as an arrow indicating the way; Perpendicular, referencing either the implied restriction of movement to a certain area, or the visual contrast (texture) created by signifying lines, as for cut lines indicating parking spaces. It is with these collaborations in mind that I interact with the lines on the floor.<br/> <br/> <br/> <br><br><br><br><br><br/> 
+            </p> 
+
+        </div>
+        <div class="containerx">
+            <p> 
+        <span class="hover-trigger">“My body as a visible thing is contained within the full spectacle. But my seeing body subtends this visible body, and all the visibles with it. There is reciprocal insertion and intertwining of one in the other. Or rather, if, as once again we must, we eschew the thinking by planes and perspectives, there are two circles, or two vortexes, or two spheres, concentric when I live naively, and as soon as I question myself, the one slightly decentered with respect to the other. . . .”
+            <span class="hover-box"> ADD PROPER REFERENCE The Visible and the Invisible (Northwestern University Studies in Phenomenology and Existential Philosophy) Northwestern University Press, 1968, Maurice Merleau-Ponty</span>
+        </p>
+        </div>
+        <div class="container">
+            <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself and the counter-parts of the whole around. Seeing the elements which surround you in a specific environment, as possible interlocutors, is allowing for integration within this setting. It is a levelling of parts to the same plane, and a recognition of importance of both yourself, the object you interact with, and the environment that surrounds all of you. More fun is to be had in places you feel you belong to.  <br/> The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.<br/><br/> <br><br> I use my body as an example, or as a suggestion for movement and interaction. <br> <br/>  I’ve been dancing in the supermarket. A meeting point. I feel more welcome to do so, no more strictness. So I think of the public space, and how it is a shared one, where we are all invited to be but not to belong. Self-confinement looks a lot like a delineated space with a ‘no entry’ signalling. A little bit as having the space around you removed, you become a .png put on another layer of the landscape, be it in nature or an interior one, a public toilet. <br/><br/><br/><br/>As I enter my bed, I leave my house in the morning. And I convince you and me I belong inside these sheets.<br><br> 
+            </p>
+        </div>
+        <div class="container">
+            <img src="" alt="Hover Example" class="hover-trigger">
+            <div class="hover-box" style="font-size: 1.5em; width: 50vw; height: 40vh; ">
+                Every phenomenon can be experienced in two ways. These two ways are not arbitrary, but are bound up with the phenomenon—developing out of its nature and characteristics:<br/>Externally—or—inwardly.<br/>The street can be observed through the windowpane, which diminishes its sounds so that its movements become phantom-like. The street itself, as seen through the transparent (yet hard and firm) pane seems set apart, existing and pulsating as if "beyond."<br/>As soon as we open the door, step out of the seclusion and plunge into the outside reality, we become an active part of this reality and experience its pulsation with all our senses.
+                PROPER REFERENCE, KANDINSKY
+            </div>
+        </div>
+        <div class="footer">
+            <p>next page</p>
+        </div>
+        <script>
+            // Add touch support for mobile devices
+            document.addEventListener('DOMContentLoaded', function () {
+                const hoverText = document.getElementById('hover-text');
+                const hoverImage = document.getElementById('hover-image');
+    
+                // Toggle image visibility on touch
+                hoverText.addEventListener('touchstart', function (e) {
+                    e.preventDefault(); // Prevent default touch behavior
+                    if (hoverImage.style.display === 'block') {
+                        hoverImage.style.display = 'none';
+                    } else {
+                        hoverImage.style.display = 'block';
+                    }
+                });
+    
+                // Hide the image when touching outside the paragraph
+                document.addEventListener('touchstart', function (e) {
+                    if (!hoverText.contains(e.target) && !hoverImage.contains(e.target)) {
+                        hoverImage.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
