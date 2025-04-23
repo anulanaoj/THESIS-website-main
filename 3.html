@@ -29,7 +29,7 @@
             width: 100%;
             height: 100vh;
             background-color: #ffffff; /* Dark grey background */
-            color: rgb(71, 133, 24); /* White text */
+            color: rgb(0, 0, 0); /* White text */
             display: flex;
             align-items: left;
             
@@ -62,7 +62,7 @@
             height: 100vh;
             width: 100vw;
             background-color: #ffffff; /* Light grey background */
-            border: #000000 solid 1px; /* Light grey border */
+            border: #ffffff solid 1px; /* Light grey border */
         }
         .container p {
             font-size: 0.9em;
@@ -80,24 +80,51 @@
             height: 100vh;
             width: 100vw;
             background-color: #ffffff; /* Light grey background */
-            border: #000000 solid 1px; /* Light grey border */
+            border: #ffffff solid 1px; /* Light grey border */
         }
         .containerx p {
             font-size: 0.9em;
-            padding-left: 40%;
+            padding-left: 45%;
             padding-top: 5%;
             color: #333; /* Dark grey text */
-            width: 40vw;
+            width: 35vw;
             text-align: justify;
         }
-        .container img {
-            width: 50vw;
+        .imageright {
+            position: absolute;
+            display: flex;
+        }
+        .imageright img {
+            width: 30vw;
             height: auto;
-            display:block;
-            position:absolute;
+            position:relative;
             z-index: 1;
-            left: 30%;
-            top: 10%;
+            left: 60vw;
+            top: 55vh;
+        }
+        .imageright1 {
+            position: absolute;
+            display: flex;
+        }
+        .imageright1 img {
+            width: 20vw;
+            height: auto;
+            position:relative;
+            z-index: 1;
+            left: 45vw;
+            top: 40vh;
+        }
+        .imageleft {
+            position: absolute;
+            display: flex;
+        }
+        .imageleft img {
+            width: 20vw;
+            height: auto;
+            position:relative;
+            z-index: 1;
+            left: 10vw;
+            top: 25vh;
         }
         .footer {
             position: relative;
@@ -193,7 +220,24 @@
         .hover-trigger:hover + .hover-box {
             display: block; /* Make the hover-box visible */
         }
-        </style>
+        .slideshow-container {
+            position: relative;
+            max-width: 30vw;
+            height: auto;
+            margin: auto;
+            cursor: pointer; /* Add cursor pointer to indicate interactivity */
+        }
+        .slideshow-container img {
+            width: 30vw;
+            height: auto;
+        }
+        .slide {
+            display: none;
+        }
+       
+      
+    </style>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to your external stylesheet -->
     </head>
     <body>
         <div class="header">
@@ -211,14 +255,21 @@
                 Acts of interaction with these settings are meant to facilitate a conscious embodiment of the body itself, in order to take a step inside this landscape. It is by assuming the position of yourself within your borders that they dissipate, and you become welcome to start touching the world. I propose the subject to come nearer to the object surrounding them, on the same plane.<br><br>
                 If you put yourself on a different plane, you can’t touch the original one. We do not walk on nature; we walk in nature. Acts done in the purview of this research, be they done on the island or in the studio, call for this merging of parts. A conciliation of the physical with the felt in efforts to shorten the distance with what is perceived (what is there) and what is felt (what is sensed).<br><br>
                 Applying formal visual exercises as interactions with the world is a method of engaging. Interaction is a way of returning to what is there. This makes things in the world closer to us, as well as allowing for a dialogue with it. You hear what is said to you; you acknowledge and participate. These happenings are opportunities for letting go of any hesitation involving contact with an exterior element. Fear of contact reinforces separation between self and world. To make the external internal, and the internal external, is to practice mutual transformation.
-            </p>
-    
-            <img id="hover-image" src="3/PXL_20240727_173826963.jpg" alt="Interaction example">
+                <br><br>This blurring extends to the notion of borders themselves. The body's perceived boundary shapes its relationship to the world.
+                </p>
+                <div class="imageright">
+                <img src="3/borders.png" alt="">
+                </div>
+            
+
         
         </div>
         <div class="container">
-            <p>I think out loud with painted lines on the ground, for their immediate appearance as lines and their proportion to our shared scale, they can be seen as bodies next to ours.<br/>  They delineate space, instruct us on movement. The lines are de comunicação POPUP. The curiosity lies in how this interaction affects our perception of, and movement within space; in how these lines transform the aesthetic of our days. They are often not seen, for it is expected they would be there anyways, but there is rhythm in a cross path. It is a structural visual language built on our behaviour. It is either parallel or perpendicular to intuitive movement. It is parallel as an arrow indicating the way; Perpendicular, referencing either the implied restriction of movement to a certain area, or the visual contrast (texture) created by signifying lines, as for cut lines indicating parking spaces. It is with these collaborations in mind that I interact with the lines on the floor.<br/> <br/> <br/> <br><br><br><br><br><br/> 
+            <p>I think out loud with painted lines on the ground, for their immediate appearance as lines and their proportion to our shared scale, they can be seen as bodies next to ours.<br/>They delineate space, instruct us on movement. The lines are de comunicação POPUP. The curiosity lies in how this interaction affects our perception of, and movement within space; in how these lines transform the aesthetic of our days. They are often not seen, for it is expected they would be there anyways, but there is rhythm in a cross path. It is a structural visual language built on our behaviour. It is either parallel or perpendicular to intuitive movement. It is parallel as an arrow indicating the way; Perpendicular, referencing either the implied restriction of movement to a certain area, or the visual contrast (texture) created by signifying lines, as for cut lines indicating parking spaces. It is with these collaborations in mind that I interact with the lines on the floor.<br/> <br/> <br/> <br><br><br><br><br><br/> 
             </p> 
+            <div class="imageright1">
+                <img src="3/I think out loud with lines in the ground.jpg" alt="">
+            </div>
 
         </div>
         <div class="containerx">
@@ -228,8 +279,32 @@
         </p>
         </div>
         <div class="container">
-            <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself and the counter-parts of the whole around. Seeing the elements which surround you in a specific environment, as possible interlocutors, is allowing for integration within this setting. It is a levelling of parts to the same plane, and a recognition of importance of both yourself, the object you interact with, and the environment that surrounds all of you. More fun is to be had in places you feel you belong to.  <br/> The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.<br/><br/> <br><br> I use my body as an example, or as a suggestion for movement and interaction. <br> <br/>  I’ve been dancing in the supermarket. A meeting point. I feel more welcome to do so, no more strictness. So I think of the public space, and how it is a shared one, where we are all invited to be but not to belong. Self-confinement looks a lot like a delineated space with a ‘no entry’ signalling. A little bit as having the space around you removed, you become a .png put on another layer of the landscape, be it in nature or an interior one, a public toilet. <br/><br/><br/><br/>As I enter my bed, I leave my house in the morning. And I convince you and me I belong inside these sheets.<br><br> 
+            <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself and the counter-parts of the whole around. Seeing the elements which surround you in a specific environment, as possible interlocutors, is allowing for integration within this setting. It is a levelling of parts to the same plane, and a recognition of importance of both yourself, the object you interact with, and the environment that surrounds all of you. More fun is to be had in places you feel you belong to.  <br/> The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.<br/><br/> <br><br> 
             </p>
+        </div>
+        <div class="containerx">
+            <p> I use my body as an example, or as a suggestion for movement and interaction. <br>
+                <br/><br><br>I’ve been dancing in the supermarket. A meeting point. I feel more welcome to do so, no more strictness. So I think of the public space, and how it is a shared one, where we are all invited to be but not to belong. Self-confinement looks a lot like a delineated space with a ‘no entry’ signalling. A little bit as having the space around you removed, you become a .png put on another layer of the landscape, be it in nature or an interior one, a public toilet. <br/><br/>
+                <br/><br/>As I enter my bed, I leave my house in the morning. And I convince you and me I belong inside these sheets.<br><br>
+            </p>
+            <div class="imageleft">
+                
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="3/IMG_20250130_194445.jpg">
+                </div>
+                <div class="slide fade">
+                    <img src="3/IMG_20250130_194612.jpg">
+                </div>
+                <div class="slide fade">
+                    <img src="3/IMG_20250130_194642.jpg">
+                </div>
+            </div>
+            </div>
+
+        
+
+    
         </div>
         <div class="container">
             <img src="" alt="Hover Example" class="hover-trigger">
@@ -242,28 +317,53 @@
             <p>next page</p>
         </div>
         <script>
-            // Add touch support for mobile devices
-            document.addEventListener('DOMContentLoaded', function () {
-                const hoverText = document.getElementById('hover-text');
-                const hoverImage = document.getElementById('hover-image');
-    
-                // Toggle image visibility on touch
-                hoverText.addEventListener('touchstart', function (e) {
-                    e.preventDefault(); // Prevent default touch behavior
-                    if (hoverImage.style.display === 'block') {
-                        hoverImage.style.display = 'none';
-                    } else {
-                        hoverImage.style.display = 'block';
+                let slideIndex = 0;
+
+                function showSlides(n) {
+                    const slides = document.getElementsByClassName("slide");
+                    if (n >= slides.length) { slideIndex = 0; } // Loop back to the first slide
+                    if (n < 0) { slideIndex = slides.length - 1; } // Loop to the last slide
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; // Hide all slides
+                    }
+                    slides[slideIndex].style.display = "block"; // Show the current slide
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    const slides = document.getElementsByClassName("slide");
+                    showSlides(slideIndex); // Show the first slide initially
+
+                    // Add click event to each slide
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].addEventListener('click', function () {
+                            slideIndex++;
+                            showSlides(slideIndex); // Show the next slide on click
+                        });
                     }
                 });
+
+                // Add touch support for mobile devices
+                document.addEventListener('DOMContentLoaded', function () {
+                    const hoverText = document.getElementById('hover-text');
+                    const hoverImage = document.getElementById('hover-image');
     
-                // Hide the image when touching outside the paragraph
-                document.addEventListener('touchstart', function (e) {
-                    if (!hoverText.contains(e.target) && !hoverImage.contains(e.target)) {
-                        hoverImage.style.display = 'none';
-                    }
+                    // Toggle image visibility on touch
+                    hoverText.addEventListener('touchstart', function (e) {
+                        e.preventDefault(); // Prevent default touch behavior
+                        if (hoverImage.style.display === 'block') {
+                            hoverImage.style.display = 'none';
+                        } else {
+                            hoverImage.style.display = 'block';
+                        }
+                    });
+    
+                    // Hide the image when touching outside the paragraph
+                    document.addEventListener('touchstart', function (e) {
+                        if (!hoverText.contains(e.target) && !hoverImage.contains(e.target)) {
+                            hoverImage.style.display = 'none';
+                        }
+                    });
                 });
-            });
         </script>
     </body>
     </html>
