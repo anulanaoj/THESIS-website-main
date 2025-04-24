@@ -234,8 +234,36 @@
         .slide {
             display: none;
         }
-       
-      
+        .image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    margin: 0 10px; /* Space between images */
+}
+
+.base-image {
+    display: block;
+    width: 20vw;
+    height: auto;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.1s ease-in-out ; /* Smooth transition */
+}
     </style>
         <link rel="stylesheet" href="styles.css"> <!-- Link to your external stylesheet -->
     </head>
@@ -277,7 +305,22 @@
         <span class="hover-trigger">“My body as a visible thing is contained within the full spectacle. But my seeing body subtends this visible body, and all the visibles with it. There is reciprocal insertion and intertwining of one in the other. Or rather, if, as once again we must, we eschew the thinking by planes and perspectives, there are two circles, or two vortexes, or two spheres, concentric when I live naively, and as soon as I question myself, the one slightly decentered with respect to the other. . . .”
             <span class="hover-box"> ADD PROPER REFERENCE The Visible and the Invisible (Northwestern University Studies in Phenomenology and Existential Philosophy) Northwestern University Press, 1968, Maurice Merleau-Ponty</span>
         </p>
-        </div>
+            <br><br><br><br><br>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="Scanned_20250424-0954-03.jpg" alt="Image 1" class="base-image">
+                    <img src="3/07.01.24. Furnas-04.jpg" alt="Hover Image 1" class="hover-image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="Scanned_20250424-0954-02.jpg" alt="Image 2" class="base-image">
+                    <img src="3/07.01.24. Furnas-05.jpg" alt="Hover Image 2" class="hover-image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="Scanned_20250424-0954-01.jpg" alt="Image 3" class="base-image">
+                    <img src="3/07.01.24. Furnas-06.jpg" alt="Hover Image 3" class="hover-image">
+                </div>
+            </div>
+            </div>
         <div class="container">
             <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself and the counter-parts of the whole around. Seeing the elements which surround you in a specific environment, as possible interlocutors, is allowing for integration within this setting. It is a levelling of parts to the same plane, and a recognition of importance of both yourself, the object you interact with, and the environment that surrounds all of you. More fun is to be had in places you feel you belong to.  <br/> The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.<br/><br/> <br><br> 
             </p>
@@ -301,10 +344,6 @@
                 </div>
             </div>
             </div>
-
-        
-
-    
         </div>
         <div class="container">
             <img src="" alt="Hover Example" class="hover-trigger">
@@ -364,6 +403,11 @@
                         }
                     });
                 });
+
+                document.querySelectorAll('.hover-image').forEach(img => {
+            img.parentElement.addEventListener('mouseenter', () => img.style.opacity = 1);
+            img.parentElement.addEventListener('mouseleave', () => img.style.opacity = 0);
+        });
         </script>
     </body>
     </html>
