@@ -17,7 +17,9 @@
             font-family: 'Century Schoolbook', serif;
             overflow-x: hidden;
             box-sizing: border-box;
+            
         }
+        
 
         .spacing {
             position: relative;
@@ -30,21 +32,40 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 10vh; /* Adjust the height as needed */
+            height: 50vh; /* Adjust the height as needed */
             background-color: lch(100% 0.01 296.81);
             display: flex;
-            justify-content: right;
+            justify-content: center;
             align-items: center;
             z-index: 1;
         }
         .header h1 {
             font-size: 1.5em;
-            color: #020200;
+            color: #a2a248;
             text-align: center;
             margin: 0;
             padding: 0;
-            padding-right: 20%;	
-            font-weight: 50;
+            padding-right: 50%;	
+            font-weight: 10;
+            position: relative;
+            z-index: 2;
+        }
+        .header img {
+            transform: translateY(0%); /* Move the image 20% higher */
+            max-width: 80%; /* Ensure the image doesn't exceed the container width */
+            height: auto;
+            margin: 0 auto;
+            padding: 0;
+            object-fit:scale-down;
+            clip-path: inset(0 0 0 0);
+            overflow: hidden;
+            box-sizing: border-box;
+            padding-left: 0;
+            padding-top: 0%;
+            padding-bottom: 0%;
+            z-index: 1;
+            display: block;
+            position: absolute;
         }
         
         .container {
@@ -53,7 +74,7 @@
             padding: 0%;
             margin: 0;
             justify-content: left;
-            height: 200vh; /* Adjust the height as needed */
+            height: 100vh; /* Adjust the height as needed */
             width: 100%; /* Adjust the height as needed */
             overflow: hidden;
             margin: 0; /* Remove any default margin */
@@ -61,29 +82,14 @@
             background-color: rgb(255, 255, 255);
             
         }
-        .container img {
-            transform: translateY(0%); /* Move the image 20% higher */
-            max-width: 60%; /* Ensure the image doesn't exceed the container width */
-            height: auto;
-            margin: 0 auto;
-            padding: 0;
-            object-fit:scale-down;
-            clip-path: inset(0 0 0 0);
-            overflow: hidden;
-            box-sizing: border-box;
-            padding-left: 10%;
-            padding-top: 0%;
-            padding-bottom: 0%;
-            z-index: 1;
-            display: block;
-        }
+
         .container p {
             font-size: 0.9em;
             color: #333;
             text-align: left;
             text-align: justify;
             padding-left: 20%;
-            margin-top: 0%;
+            margin-top: 10%;
             z-index: 2;
             position: relative;
             width: 60%;
@@ -128,7 +134,7 @@
                     position: fixed;
                     top: 10%;
                     left: 2%;
-                    width: 80vw;
+                    width: 60vw;
                     height: 80vh;
                     background-color: #ffffff;
                     z-index: 1000;
@@ -140,6 +146,7 @@
 
                 .popup-content {
                     margin-bottom: 0px;
+                    margin-left: 0;
                 }
                 .popup-content img {
                     max-width: 100%;
@@ -150,18 +157,19 @@
                     overflow: hidden;
                     box-sizing: border-box;
                     margin: 0 auto;
+                    cursor: pointer;
                 }
                 .popup-content p {
-                    font-size: 1em;
+                    font-size: 0.9em;
                     color: #ca5100;
                     text-align: left;
                     text-align: justify;
                     padding-left: 05%;
                     margin-top: 2%;
-                    margin-bottom: 5%;
+                    margin-bottom: 0%;
                     z-index: 2;
                     position: relative;
-                    width: 80%;
+                    width: 50%;
                     line-height: 1.1em;
                 }
 
@@ -180,6 +188,62 @@
                 .close-btn:hover {
                     background-color: #555;
                 }
+                .images {
+                    display: flex;
+                    justify-content: left;
+                    align-items: left;
+                    flex-wrap: wrap;
+                    margin-top: 0%;
+                    margin-bottom: 10%;
+                    margin-left: 20%; /* Move container to the right */
+                }
+                .images img {
+                    max-width: 10vw;
+                    height: auto;
+                    margin: 0 10px; /* Space between images */
+                    padding: 0;
+                    object-fit:scale-down;
+                    clip-path: inset(0 0 0 0);
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    
+                }
+                .containerx {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: left;
+                    height: 120vh;
+                    width: 100%; /* Adjust the height as needed */
+                }
+                .containerx p {
+                    font-size: 0.9em;
+                    line-height: 1.5em;
+                    color: #333;
+                    text-align: left;
+                    text-align: justify;
+                    padding-left: 25%;
+                    z-index: 2;
+                    position: relative;
+                    max-width: 40%;
+                    line-height: 1em;
+                    z-index: 2;
+                    margin-bottom: 3%;
+                    border: #020200;
+                }
+                .containerx img {
+                    max-width:80vw;
+                    height: auto;
+                    clip-path: inset(0 0 0 0);
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding-left: 20%;
+                    padding-top: 13%;
+                    padding-bottom: 0%;
+                    z-index: 1;
+                    display: block;
+                    position: absolute;
+                }
                 .footer {
                     position:relative;
                     bottom: 0;
@@ -191,6 +255,28 @@
                     text-align: center;
                     line-height: 50px; /* Center the text vertically */
                 }
+                .slideshow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: 0%;
+                    margin-bottom: 10%;
+                    margin-left: 20%; /* Move container to the right */
+                    
+                    
+                }
+                .slideshow img {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0 10px; /* Space between images */
+                    padding: 0;
+                    object-fit:scale-down;
+                    clip-path: inset(0 0 0 0);
+                    overflow: hidden;
+                    box-sizing: border-box;
+                }
+                
     </style>
 </head>
 <body>
@@ -198,49 +284,65 @@
         <h1> 
             2.Humidity</a>
         </h1>
+        <img src="2/PXL_20240727_172838968.PANO.jpg" alt="Second Image">
     </div>
     
         <br>
         <div class="container">
-            <img src="2/PXL_20240727_172838968.PANO.jpg" alt="Second Image">
-            
-            <div class="spacing"></div>
-            <p>Travelling to school, I saw landscapes while inside the closed car with the glass of the window as a separator of us both. The landscape is made of, in the first plane, just the road, grey and strict. It then contrasts with the remaining planes- of grass, trees and mountains, green that can make you think you are predestined to only see one colour for the rest of your days. So much green you forget there is a sky.
+           
+            <p>Travelling to school, I saw landscapes while inside the closed car with the glass of the window as a separator of us both.
+                </p>
+                <div class="images">
+                    <img src="10143879964_9ea91dd450_o.jpg" alt="">
+                    <img src="10144103803_c24aa8587c_o.jpg" alt="">
+                    </div>
+            </div>
+                    
+            <div class="containerx">
+                <p>The landscape is made of, in the first plane, just the road, grey and strict. It then contrasts with the remaining planes- of grass, trees and mountains, green that can make you think you are predestined to only see one colour for the rest of your days. So much green you forget there is a sky.
             The sky is usually grey. The island welcomes an agglomerate of clouds which sometimes come down to say hello and confirm themselves by touching us in the skin. I’ve always had the desire to escape the car, open the door unharmed and go go go to the mountains. They appear closer than they are. Wanting to go there and hug the grass face down and breathe in the remaining drops left by humidity of the previous day’s rain.
             The feeling of embeddedness is translatable to that of the characteristic humidity of the island – 
             <span class="hover-trigger" onclick="openPopup()" style="color: orange;">orange is everywhere.</span>
                 Humidity affects our sense-hood, ingrains itself in our bones, gives us headaches. It is as some entity has entered us. It is as glue which un-differentiates the body from its surroundings. It limits felt distance to the environment because it embeds itself on anything inserted in said environment. A homogeneous being it is.
                 </p>
-            <div id="popup" class="popup-box">
+                <img src="2/PXL_20240727_173922115.jpg" alt="">
+            </div>
+               
+                
 
+            <div id="popup" class="popup-box">
                 <div class="popup-content">
-                    <p>2.1. </p>
-                    <p>This object is my sibling, made for my head from cotton. It is a hat which covers the face. I’ve soaked it with means of having some visualization of an environment entering a body. I’ve found this way by putting aside my own desire to be this touca POPUP, HOOD, out of convenience. But there is the fear of copying, even though I would only do Ana Mendieta a continuation of her action, if I enter this stream it would take me too far without taking the slow steps you see in this document.
+                    <p>This object is my sibling, made for my head from cotton. It is a hat which covers the face. I’ve soaked it with means of having some visualization of an environment entering a body. I’ve found this way by putting aside my own desire to be this touca (hood) out of convenience. But there is the fear of copying, even though I would only do Ana Mendieta a continuation of her action, if I enter this stream it would take me too far without taking the slow steps you see in this document.
                         <br>
                         Slow steps so you notice how one becomes two, which really just means that two become one. (it is both at once). And this integration of movement, I see slowed down by dense atmospheres. As are the ones solidified by humidity. Humidity which makes the cold colder and the warm insufferable, it is tension you cut with the knife, without any discomfort. This is tension that secures you, hugs you so surely sometimes it enters you, you breath slow. You smell it enter you.
                         <br>
                         <br> What goes through us does so through walls. And you do smell it enter the wall you touch and feel wet. And clean your fingers on your already damp shirt. Your clothes merge with you, and you do so with the walls.</p>
-                        <img src="2/PXL_20240721_151934678.jpg" alt="">
-                        <img src="2/PXL_20240721_152259032.jpg" alt="">
-                        <img src="2/PXL_20240721_153341866.jpg" alt="Sample Image">
-                        <img src="2/PXL_20240721_153344577.jpg" alt="">
-                        <img src="2/PXL_20240721_153715675.jpg" alt="">
-                        <img src="2/PXL_20240721_153906343.jpg" alt="">
-                </div>
+                        <div class="slideshow"></div>
+                            <img src="2/PXL_20240721_151934678.jpg" alt="" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_152259032.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_153341866.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_153344577.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_153715675.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_153906343.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
+                        </div>
+                
                 <button class="close-btn" onclick="closePopup()">Close</button>
             </div>
-            <div class="spacing"></div>
-            <img src="2/PXL_20240727_173922115.jpg" alt="">
-       
-
-        
+           </div>
             
-        </div>
+    
         <div class="footer">
             <p>next page</p>
         </div>
 
 <script>
+    function showNextImage(currentImage) {
+                                const images = currentImage.parentElement.querySelectorAll('img');
+                                let currentIndex = Array.from(images).indexOf(currentImage);
+                                currentImage.style.display = 'none';
+                                let nextIndex = (currentIndex + 1) % images.length;
+                                images[nextIndex].style.display = 'block';
+                            }
         function openPopup() {
             document.getElementById('popup').style.display = 'block';
         }
