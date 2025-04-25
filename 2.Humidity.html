@@ -18,6 +18,7 @@
             overflow-x: hidden;
             box-sizing: border-box;
             
+            
         }
         
 
@@ -277,6 +278,10 @@
                     box-sizing: border-box;
                 }
                 
+                .clickable-content {
+                    cursor: url(click.png), pointer; /* Custom pointer for specific elements */
+                }
+                
     </style>
 </head>
 <body>
@@ -302,7 +307,7 @@
                 <p>The landscape is made of, in the first plane, just the road, grey and strict. It then contrasts with the remaining planes- of grass, trees and mountains, green that can make you think you are predestined to only see one colour for the rest of your days. So much green you forget there is a sky.
             The sky is usually grey. The island welcomes an agglomerate of clouds which sometimes come down to say hello and confirm themselves by touching us in the skin. I’ve always had the desire to escape the car, open the door unharmed and go go go to the mountains. They appear closer than they are. Wanting to go there and hug the grass face down and breathe in the remaining drops left by humidity of the previous day’s rain.
             The feeling of embeddedness is translatable to that of the characteristic humidity of the island – 
-            <span class="hover-trigger" onclick="openPopup()" style="color: orange;">orange is everywhere.</span>
+            <span class="hover-trigger; clickable-content" onclick="openPopup()" style="color: orange;">orange is everywhere.</span>
                 Humidity affects our sense-hood, ingrains itself in our bones, gives us headaches. It is as some entity has entered us. It is as glue which un-differentiates the body from its surroundings. It limits felt distance to the environment because it embeds itself on anything inserted in said environment. A homogeneous being it is.
                 </p>
                 <img src="2/PXL_20240727_173922115.jpg" alt="">
@@ -318,7 +323,7 @@
                         <br>
                         <br> What goes through us does so through walls. And you do smell it enter the wall you touch and feel wet. And clean your fingers on your already damp shirt. Your clothes merge with you, and you do so with the walls.</p>
                         <div class="slideshow"></div>
-                            <img src="2/PXL_20240721_151934678.jpg" alt="" onclick="showNextImage(this)">
+                            <img src="2/PXL_20240721_151934678.jpg" alt="" class="clickable-content" onclick="showNextImage(this)">
                             <img src="2/PXL_20240721_152259032.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
                             <img src="2/PXL_20240721_153341866.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
                             <img src="2/PXL_20240721_153344577.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
@@ -326,7 +331,7 @@
                             <img src="2/PXL_20240721_153906343.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
                         </div>
                 
-                <button class="close-btn" onclick="closePopup()">Close</button>
+                <button class="close-btn clickable-content" onclick="closePopup()">Close</button>
             </div>
            </div>
             

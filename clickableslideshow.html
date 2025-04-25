@@ -1,0 +1,50 @@
+<div class="slideshow-container">
+    <img id="slideshow-image" src="5/integrating1-1.jpg" alt="Slideshow Image">
+</div>
+
+<script>
+// Slideshow functionality
+const slideshowImages = [
+    "5/integrating1-1.jpg",
+    "5/integrating1-2.jpg",
+    "5/integrating1-3.jpg",
+    "5/integrating1-4.jpg",
+    "5/integrating1-5.jpg",
+    "5/integrating1-6.jpg",
+    "5/integrating1-7.jpg",
+    "5/integrating1-8.jpg"
+];
+let currentIndex = 0;
+
+const slideshowImage = document.getElementById("slideshow-image");
+
+slideshowImage.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slideshowImages.length;
+    slideshowImage.src = slideshowImages[currentIndex];
+});
+
+
+</script>
+
+<style>
+    .slideshow-container {
+            z-index: 1;
+            position: relative;
+            max-width: 60%;
+            margin: auto;
+            padding-left: 10%;	
+            display: flex;
+            justify-content: left;
+            padding: 0%;
+            cursor: url('click.png'), auto; /* Replace with your image path */
+        }
+        .slideshow-container img {
+            padding: 0%;
+            width: 100%;
+            height: auto;
+            transition: transform 0.2s; /* Animation for zoom effect */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+</style>
+
+

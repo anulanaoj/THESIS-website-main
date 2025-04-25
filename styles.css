@@ -1,3 +1,7 @@
+* {
+    cursor: url('./custom-pointer.png'), pointer; /* Replace with the path to your custom cursor image */
+}
+
 .image-container {
     display: flex;
     flex-direction: row;
