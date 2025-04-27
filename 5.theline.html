@@ -25,7 +25,7 @@
             width: 100vw; /* Adjust the height as needed */
             background-color: lch(100% 0.01 296.81);
         }
-        .container-h1 {
+        .header {
             display: flex;
             flex-direction: row;
             align-items: left;
@@ -36,7 +36,7 @@
             padding-top: 0;
             
         }
-        .container-h1 h1 {
+        .header h1 {
             font-size: 2em;
             text-align: left;
             padding-left: 21%;
@@ -46,11 +46,11 @@
             width: 50%;
             font-weight: lighter;
         }
-        .container-h1 img {
-            max-width: 30vw;
+        .header img {
+            max-width: 100%;
             height: auto;
             margin: 0;
-            padding: 0%;
+            padding: 5%;
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
@@ -61,7 +61,7 @@
             color: #333;
             text-align: justify;
             padding-left: 20%;
-            margin-top: 15%;
+            margin-top: 25%;
             z-index: 2;
             position: absolute;
             width: 50%;
@@ -95,7 +95,7 @@
             text-align: left;
             text-align: justify;
             padding-left: 20%;
-            margin-top: 15%;
+            margin-top: 0%;
             z-index: 2;
             position: absolute;
             width: 40%;
@@ -119,7 +119,7 @@
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
-            padding-top: 20%;
+            padding-top: 40%;
         }
         .image2 {
             position: absolute;
@@ -164,7 +164,7 @@
             overflow: hidden; /* Hides any part of the image outside the container */
         }
         .image3 p {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #333;
             text-align: justify;
             padding-left: 50%;
@@ -205,15 +205,15 @@
             }
 
         .images4 {
-            max-width: 50%;
+            max-width: 100%;
             position: relative;
             margin: 0;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Two equal columns */
             gap: 0; /* Removes spacing between grid items */
-            margin-top: 21%;
-            margin-left: 20%;          
+            
+                  
         }
         .images4 img {
             max-width: 100%; /* Ensure images fit within their grid cells */
@@ -221,7 +221,48 @@
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
-            padding: 0; /* Removes padding around images */
+            padding-left: 80%; 
+            transform: translateX(0%);
+        }
+        .containerx {
+            display: flex;
+            flex-direction: column;
+            padding: 0%;
+            height: 70vh;
+            width: 100vh; /* Adjust the height as needed */
+            position: relative;
+        }
+        .containerx p {
+            font-size: 0.9em;
+            color: #333;
+            text-align: left;
+            text-align: justify;
+            padding-left: 40%;
+            margin-top: 0%;
+            z-index: 2;
+            position: relative;
+            width: 100%;
+        }
+        
+        .image5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensures the image is behind the text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-05%);
+        }
+        .image5 img {
+            max-width: 50%;
+            padding-left: 0%;
+            padding-top: 01%;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
+            overflow: hidden; /* Hides any part of the image outside the container */
         }
         
         /* Style for the modal */
@@ -236,16 +277,17 @@
             overflow: auto;
             background-color: rgba(255, 255, 255, 0); /* Black background with opacity */
             padding-top: 05%;
+            
 
         }
 
         .modal-content {
             margin: auto;
             display: block;
-            max-width: 80%;
-            max-height: 80%;
+            max-width: 100%;
+            max-height: 100%;
             border: 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
         }
 
         .close {
@@ -293,33 +335,20 @@
      </style>
 </head>
 <body>
-    <div class="container-h1">
+    <div class="header">
         <h1>5. The line</h1>
+        <img src="5/line intro.jpg" alt="">
     </div>
     <div class="container">
-        <div class="container">
-            <img src="5/entranha-me. canvas .-25.jpg" alt="Background Image">
-            <p>
-                When I close my eyes and focus on my body, when I focus on my fingertips, on my nails, on the space between my fingers, when I think of my wrists, I feel the blood flowing through them. I feel my arms and I feel where my lower arm touches my upper arm. I feel where this upper arm touches my shoulder and so on. I close my eyes, but I see my body. I feel my body and I perceive the edges of it as I perceive where it touches itself. Where it touches itself, there are tension points which make the physicality of my own body apparent to me.
-                <br><br>
-                I urge you to do the same. Close your eyes. And feel your skin. If you feel your skin, you can trace your volume in your head. You can identify the space you occupy, and if you open your eyes, you can put it in relation to the space you don't occupy. And in this way, gather some sensibility on your self-perception and the perception that you have of the world. When doing this exercise, you are not closed to the world, you still feel the air around you. You may hear some noise outside. But your range is very limited. And when it's not limited, it's mostly imagination that the sounds or smells suggest.
+            <p>When I close my eyes and focus on my body, when I focus on my fingertips, on my nails, on the space between my fingers, when I think of my wrists, I feel the blood flowing through them. I feel my arms and I feel where my lower arm touches my upper arm. I feel where this upper arm touches my shoulder and so on. I close my eyes, but I see my body. I feel my body and I perceive the edges of it as I perceive where it touches itself. Where it touches itself, there are tension points which make the physicality of my own body apparent to me.
+            <br><br>I urge you to do the same. Close your eyes. And feel your skin. If you feel your skin, you can trace your volume in your head. You can identify the space you occupy, and if you open your eyes, you can put it in relation to the space you don't occupy. And in this way, gather some sensibility on your self-perception and the perception that you have of the world. When doing this exercise, you are not closed to the world, you still feel the air around you. You may hear some noise outside. But your range is very limited. And when it's not limited, it's mostly imagination that the sounds or smells suggest.
             </p>
+            <div class="image1">
+            <img src="1.1.jpg">
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container">
-            <div class="image1">
-            <img src="1.1.jpg"> 
-            
-            </div>
-            </div>
-    <div class="container">
     
+    <div class="container">
         <div class="image2">
             <img src="5/Handwritten_2024-12-14_160457-2.jpg" alt="">
         </div>
@@ -328,7 +357,7 @@
             <br>
             <br>
             The skin hugs our body and makes itself appear through external objects. I exist when I have touched. If you right now go touch a wall, it is touched, but you remain feeling your skin touching the wall. The impressions that this wall leaves, give you the information that it is something outside of you that comes into contact. This contact is as a negative of a photograph is. So we perceive this object in front of us through its delineation. I speak of delineation as an outline. What separates a cup from a lagoon. These defining lines are central to our perception of the world. There would be no object as we know it otherwise, no character in the world. Form instructs our behaviour. In the same way, we don't know experience without a body.
-            <br>
+            <br><br><br><br><br><br><br><br><br>
             The body delineated by itself creates a barrier which would be impenetrable if not for the senses and the ability to move. These allow the barriers to be penetrable, transformed into bridges between you and all other yous around. Our outline is the field where things touch, affect each other.</p>
         </p>
         </div>
@@ -337,7 +366,7 @@
     
     <div class="container">
         <div class="image3">
-            <img src="5/png.png" alt="Background Image">
+            <img src="" alt="Background Image">
         <p>As I drink from a mug, I touch it once when to hold it, touch it twice with my lips. But only when I drink from it there is a sensible interaction. Although it is not the mug that goes inside of me, it is what informs the sensation to be. Between the drink and my body there is the mug. I put weight on this act due to feeling the cold drink telling the shape of my own oesophagus, and then of whatever follows. This happens because of the interaction  between the drink and my body. And gain a sense of my internal composition, as a drawing, through its felt outlining. The (out/in)line is felt through contrast.
         </p>
     </div>
@@ -357,21 +386,24 @@
             The line is only known when entered as a space with its own delineation.
             <br>
             As our line is, I believe so to be Merleau-Ponty’s concept of the flesh, defending undifferentiation of object and subject. In his later work, The Visible and the Invisible, he introduces flesh as an elemental fabric that precedes and enables perception. Flesh is neither just subjective or objective but constitutes the medium through which the world and the perceiving body meet and exchange. It is this exchange that allows visibility and tactility to be shared, forming a structure where seeing and being seen, touching and being touched, collapse into each other. This collapse constitutes what Merleau-Ponty refers to as the chiasm – a crisscrossing of experience where the boundaries between us and world, subject and object, dissolve into a field of reciprocal perception.
-            <br>
+            <br><br>
             The flesh is the intertwining of the sensible and the sentient, the place where the body does not simply observe the world from a detached position but is felt within it.
             <br>
             <br>
         </p>
+            
+        <div class="image5">
+            <img src="5/background image.jpg" alt="">
     </div>
-    <div class="container">
+    </div>
+    <div class="containerx">
+        <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.
+        </p>
         <div class="images4">
             <img src="5/integrating-1.jpg" alt="Image 1" class="clickable-image">
             <img src="5/integrating-2.jpg" alt="Image 2" class="clickable-image">
         </div>
-        <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.</p>
     </div>
-
-    <!-- Add this modal structure for displaying the enlarged image -->
     <div id="image-modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-image">
