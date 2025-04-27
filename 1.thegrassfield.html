@@ -39,10 +39,10 @@
             margin-top: 02%;
             z-index: 2;
             position: relative; /* Change to relative to avoid overlap */
-            height: auto; /* Allow the height to adjust to content */
+            height: 100vh; /* Allow the height to adjust to content */
             width: 100vw;
             padding-bottom: 5% ;
-            height: 50vh;
+            
             
         }
         .h1 p {
@@ -52,8 +52,23 @@
             width: 50vw; /* Match the width of the image */
             margin-top: 10%;
             left: 0;
+            position: relative;
+
         }
-        
+        .h1 img {
+            width: 50vw; /* Make the image take up the full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 0px; /* Add spacing between the image and text */
+            display: flex;
+            position: absolute;
+            margin-top: 0%;
+            padding-left: 40%;
+            padding: 0%;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
+            overflow: hidden; /* Hides any part of the image outside the container */
+            z-index: 1;
+        }
         .container {
             display: flex;
             flex-direction: column; /* Stack the image and text vertically */
@@ -102,7 +117,7 @@
             flex-direction: column; /* Stack the image and text vertically */
             align-items: flex-start; /* Align items to the left */
             max-width: 100%;
-            height: auto;
+            height: 100vh;
             margin-top: 0; /* Keeps the top margin at 0 */
             padding-left: 0; /* No padding on the left */
             margin-left: 0; /* Aligns the image to the left */
@@ -114,7 +129,7 @@
             margin-bottom: 20px; /* Add spacing between the image and text */
             display: flex;
             position: absolute;
-            margin-top: 15%;
+            margin-top: 20%;
             padding: 0%;
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
@@ -140,10 +155,11 @@
             flex-direction: row; /* Place the image and text side by side */
             align-items: flex-start; /* Align items to the top */
             max-width: 100%;
-            height: auto;
+            height: 120vh;
             margin-top: 0; /* Keeps the top margin at 0 */
             padding-left: 0; /* No padding on the left */
             margin-left: 0; /* Aligns the container to the left */
+            margin-bottom: 10%;
         }
 
         
@@ -152,7 +168,7 @@
             color: #333;
             text-align: justify;
             width: 40vw; /* Match the width of the image */
-            margin-top: 30%; /* Keeps the top margin at 0 */
+            margin-top: 0%; /* Keeps the top margin at 0 */
             padding-left: 0; /* No padding on the left */
             margin-left: 0; /* Aligns the image to the left */
             position: relative;
@@ -164,12 +180,12 @@
             grid-template-columns: 1fr; /* Single column for vertical layout */
             grid-gap: 20px; /* Space between images */
             width: 100%; /* Full width of the container */
-            margin-top: 30%; /* Keeps the top margin at 0 */
+            margin-top: 0%; /* Keeps the top margin at 0 */
             padding-left: 0; /* No padding on the left */
             margin-left: 5%; /* Aligns the image to the left */
         }
         .images img {
-            width: 34vw; /* Make the image take up the full width of the container */
+            width: 31vw; /* Make the image take up the full width of the container */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 0px; /* Add spacing between the image and text */
             display: flex;
@@ -188,10 +204,10 @@
             position: relative; /* Change to relative to avoid overlap */
             width: auto;
             bottom: 0;
-            max-height: 5vh; /* Allow the height to adjust to content */
-            margin-top: 20px; /* Add space above the footer */
-            padding-right: 0%;
-            padding-bottom: 5%;
+            max-height: 10vh; /* Allow the height to adjust to content */
+            margin-top: 20%; /* Add space above the footer */
+            padding-right: 15%;
+            padding-bottom: 3%;
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
@@ -199,10 +215,7 @@
             vertical-align: middle; /* Align the image vertically with the text */
             margin-right: 10px; /* Add space between the image and text */
         }
-        span {
-        position: relative; /* Make the span the reference point for the popup */
-        cursor: pointer; /* Change the mouse cursor to a pointer */
-    }
+        
     
     .hover-box {
             display: none;
@@ -273,6 +286,7 @@
         <div class="h1">
             <p>1. the grass field
             </p>
+            <img src="1.background.png" alt="">
         </div>
         <br>
         <br>
@@ -301,33 +315,27 @@
         </p>
         <img src="1/1.field-02.jpg" alt="">
         </div>
-        <div class="container">
-        <br>
-        <br>
-        <br>
         <div class="containerxy">
             <p>Once there, stayed with my back turned to the car. Not to remember where I had come from. Assuming this position, I turn from the lens to the landscape that brought me in to begin with. Once you reach the landscape, its whole is separated into parts. Ones as you are. The mountains were closer, but still further than an arms distance. Not to touch, to see. I understood their shape as my own.<br/>
                 <br> They are tall from where they look, but short from where I do. I became lower, can I appear through the grass as the mountains are covered with trees at their bottom? Only when coming closer you are under the tree<br/>Stood up to hunch the spine. I imitate their round tops, I go along with the play with the horizon. Not flat. Again, I am you. And I move, unsure if the outline of my back will match that of the mountains, but having the sensation so.<br/>
                 <br>Lastly, to form with my body formal disruption to the images, I went with my arms up, perpendicular to the horizon, arms copying the upright position of the torso. Stand up with your arms. Glue yourself to the world.<br/>In this scenario, I play as so to enter this place, mine, and yours. And I do so to enter and be welcomed. I go there, I mimic and I counterpose, stapling through tension points.<br/><br/><br/>The actions were a mix of instinct influenced by what I rationalized to be the eye of the beholder, my friend and the camera she held. But this eye that is far sees not what I see from the inherent first person perspective. I do not see me as I do not see the bottom of the far away trees, which the camera doesn’t see the tops of. I don’t see but I act. Sight is limited to the space inside my eyes, limited to my own movement.<br/>When lower, I see the below what I do when I stand. When the neck is upright I see all which surrounds me, I see the whole. The opposite when I crouch with a guarded head, I see my interior space, the body which is a part, as its own environment. I see then the dark tone of my clothing and the grass poking through it, touching my ankles. Movement is, in this closed position, informed by the memory of what I saw when in an open position<br/>
+                <br/>Seeing the images after taking the movement, it is clear what was in my sight is not what was in the camera’s. There is distinction between the first and third person sights. The mountains I described are not visible with a different perspective than mine. What has influenced the movement acted was unseeable – this made my body a prominent element of the scene, certainly detectable.<br/>Coincidences as the hands becoming trees and the body a stone where they grow from. The attempts at being perpendicular so to join the landscape I feel are successful. It is the tension points that confirm my being in, in relation to the land. They glue me to the world and make me part of it. Small movements mimic those of the grass moving with the wind. My movements affected by the grass affected by the wind. I see as I look at the images, an attempt to not be recognized as a body, I want to camouflage myself with the surroundings. The way of doing so, my own instinct I find funny, to curl the body as a stone, make my torso be my body as if I was immovable, grabbable and coming from having fallen off of some cliff, with fear my limbs will give my humanity away.<br/><br/>
             </p>
                 <div class="images">
                 <img src="1/1.field-05.jpg" alt="">
                 <img src="1/1.field-07.jpg" alt="">
+                <img src="1/1.field-08.jpg" alt="">
                 </div>
         </div>
-        <div class="containerxy">
-            <p><br/>Seeing the images after taking the movement, it is clear what was in my sight is not what was in the camera’s. There is distinction between the first and third person sights. The mountains I described are not visible with a different perspective than mine. What has influenced the movement acted was unseeable – this made my body a prominent element of the scene, certainly detectable.<br/>Coincidences as the hands becoming trees and the body a stone where they grow from. The attempts at being perpendicular so to join the landscape I feel are successful. It is the tension points that confirm my being in, in relation to the land. They glue me to the world and make me part of it. Small movements mimic those of the grass moving with the wind. My movements affected by the grass affected by the wind. I see as I look at the images, an attempt to not be recognized as a body, I want to camouflage myself with the surroundings. The way of doing so, my own instinct I find funny, to curl the body as a stone, make my torso be my body as if I was immovable, grabbable and coming from having fallen off of some cliff, with fear my limbs will give my humanity away.<br/><br/>
-        </p>
-        </div>
-   
-      <div class="footer">
-        <a href="2.Humidity.html" 
-        style="text-decoration: none; color: black;" 
-        onmouseover="this.style.color='white';" 
-        onmouseout="this.style.color='black';">
-        <img src="next.png" alt="Footer Image">
-     </a>
-      </div>
+    <div class="footer">
+      <a href="2.Humidity.html" 
+      style="text-decoration: none; color: black;" 
+      onmouseover="this.style.color='white';" 
+      onmouseout="this.style.color='black';">
+      <img src="next.png" alt="Footer Image">
+      </a>
+    </div>
+    
     
         
     </body>
