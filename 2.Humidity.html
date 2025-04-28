@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.1. Humidity</title>
+    <title>2. humidity</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
         * {
@@ -33,27 +33,30 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 50vh; /* Adjust the height as needed */
+            height: 48vh; /* Adjust the height as needed */
             background-color: lch(100% 0.01 296.81);
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: left;
             z-index: 1;
+            border: 1px solid #000;
         }
         .header h1 {
-            font-size: 1.5em;
-            color: #a2a248;
-            text-align: center;
+            font-size: 2em;
+            color: #000000;
+            text-align: left;
             margin: 0;
             padding: 0;
-            padding-right: 50%;	
+            padding-top: 8%;
+            padding-left:60%;	
             font-weight: 10;
             position: relative;
             z-index: 2;
+            font-weight: lighter;
         }
         .header img {
             transform: translateY(0%); /* Move the image 20% higher */
-            max-width: 80%; /* Ensure the image doesn't exceed the container width */
+            max-width: 100%; /* Ensure the image doesn't exceed the container width */
             height: auto;
             margin: 0 auto;
             padding: 0;
@@ -75,7 +78,7 @@
             padding: 0%;
             margin: 0;
             justify-content: left;
-            height: 100vh; /* Adjust the height as needed */
+            height: 70vh; /* Adjust the height as needed */
             width: 100%; /* Adjust the height as needed */
             overflow: hidden;
             margin: 0; /* Remove any default margin */
@@ -90,7 +93,7 @@
             text-align: left;
             text-align: justify;
             padding-left: 20%;
-            margin-top: 10%;
+            margin-top: 0%;
             z-index: 2;
             position: relative;
             width: 60%;
@@ -170,7 +173,7 @@
                     margin-bottom: 0%;
                     z-index: 2;
                     position: relative;
-                    width: 50%;
+                    width: 80%;
                     line-height: 1.1em;
                 }
 
@@ -195,13 +198,13 @@
                     align-items: left;
                     flex-wrap: wrap;
                     margin-top: 0%;
-                    margin-bottom: 10%;
+                    margin-bottom: 0%;
                     margin-left: 20%; /* Move container to the right */
                 }
                 .images img {
-                    max-width: 10vw;
+                    max-width: 15.5vw;
                     height: auto;
-                    margin: 0 10px; /* Space between images */
+                    margin: 0 1px; /* Space between images */
                     padding: 0;
                     object-fit:scale-down;
                     clip-path: inset(0 0 0 0);
@@ -223,17 +226,17 @@
                     color: #333;
                     text-align: left;
                     text-align: justify;
-                    padding-left: 25%;
+                    padding-left: 20%;
                     z-index: 2;
                     position: relative;
-                    max-width: 40%;
+                    max-width: 47.5%;
                     line-height: 1em;
                     z-index: 2;
                     margin-bottom: 3%;
                     border: #020200;
                 }
                 .containerx img {
-                    max-width:80vw;
+                    max-width:67vw;
                     height: auto;
                     clip-path: inset(0 0 0 0);
                     overflow: hidden;
@@ -301,13 +304,14 @@
     
         <br>
         <div class="container">
-           
-            <p>Travelling to school, I saw landscapes while inside the closed car with the glass of the window as a separator of us both.
-                </p>
-                <div class="images">
+           <div class="images">
                     <img src="10143879964_9ea91dd450_o.jpg" alt="">
                     <img src="10144103803_c24aa8587c_o.jpg" alt="">
+                    <img src="2/10144097293_56e2e068c7_o.jpg" alt="">
                     </div>
+            <p>Travelling to school, I saw landscapes while inside the closed car with the glass of the window as a separator of us both.
+                </p>
+                
             </div>
                     
             <div class="containerx">
@@ -330,6 +334,7 @@
                         <br>
                         <br> What goes through us does so through walls. And you do smell it enter the wall you touch and feel wet. And clean your fingers on your already damp shirt. Your clothes merge with you, and you do so with the walls.</p>
                         <div class="slideshow"></div>
+                        <p style="color: #000;">click click click</p>
                             <img src="2/PXL_20240721_151934678.jpg" alt="" class="clickable-content" onclick="showNextImage(this)">
                             <img src="2/PXL_20240721_152259032.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
                             <img src="2/PXL_20240721_153341866.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
