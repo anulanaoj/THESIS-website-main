@@ -78,6 +78,7 @@
             height: 100vh;
             width: auto; /* Adjust the height as needed */
             position: relative;
+            margin-top: 15%;
             
             
         }
@@ -94,7 +95,7 @@
             font-weight: lighter;
         }
         .container img {
-            max-width: 35%;
+            max-width: 30%;
             height: auto;
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
@@ -107,33 +108,27 @@
             position: relative;
             top: 0;
             left: 0;
-            max-width: 50%;
-            height: 50%;
+            max-width: 100%;
+            height: auto; /* Adjust the height as needed */
             z-index: 1; /* Ensures the image is behind the text */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: left;
             left: 20%;
             top: 10%;
-            transform: translateX(-50%);
+            transform: translateX(-0%);
         }
         .image3 img {
-            max-width: 50%;
+            max-width: 40%;
             height: auto;
             object-fit: cover;
+            position: relative;
+            display: flex;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
+            padding-top: 10%;
         }
-        .image3 p {
-            font-size: 0.8em;
-            color: #333;
-            text-align: justify;
-            padding-left: 50%;
-            padding-top: 25%;
-            z-index: 2;
-            position: absolute;
-            width: 50%;
-        }
+    
         .hover-box {
             display: none;
             position: absolute;
@@ -166,13 +161,16 @@
             }
 
         .images4 {
-            max-width: 100%;
+            max-width: 50%;
             position: relative;
             margin: 0;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Two equal columns */
             gap: 0; /* Removes spacing between grid items */
+            margin-left: 20%;
+            margin-top: 0%;
+            padding-top: 20%;
             
                   
         }
@@ -182,27 +180,9 @@
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
-            padding-left: 80%; 
+            padding-left: 0%; 
             transform: translateX(0%);
-        }
-        .containerx {
-            display: flex;
-            flex-direction: column;
-            padding: 0%;
-            height: 70vh;
-            width: 100vh; /* Adjust the height as needed */
-            position: relative;
-        }
-        .containerx p {
-            font-size: 0.9em;
-            color: #333;
-            text-align: left;
-            text-align: justify;
-            padding-left: 40%;
-            margin-top: 0%;
-            z-index: 2;
-            position: relative;
-            width: 100%;
+
         }
         
         .image5 {
@@ -292,8 +272,6 @@
             height: 8vh; /* Maintain aspect ratio */
             margin-right: 10px; /* Add space between the image and text */
         }
-       
-    
      </style>
 </head>
 <body>
@@ -320,10 +298,6 @@
         </div>
     
     <div class="container">
-        <div class="image3">
-            <img src="5/5.2..jpg">
-            </div>
-        
         <p class="hover-text">
         As I drink from a mug, I touch it once when to hold it, touch it twice with my lips. But only when I drink from it there is a sensible interaction. Although it is not the mug that goes inside of me, it is what informs the sensation to be. Between the drink and my body there is the mug. I put weight on this act due to feeling the cold drink telling the shape of my own oesophagus, and then of whatever follows. This happens because of the interaction  between the drink and my body. And gain a sense of my internal composition, as a drawing, through its felt outlining. The (out/in)line is felt through contrast.
         <br><br><br>
@@ -350,7 +324,7 @@
             <img src="5/background image.jpg" alt="">
     </div>
     </div>
-    <div class="containerx">
+    <div class="container">
         <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.
         </p>
         <div class="images4">
