@@ -66,7 +66,7 @@
             display: flex;
             flex-direction: row;
             width: 100vw;
-            height: 180vh;
+            height: 100%;
             justify-content: left;
             align-items: left;
        
@@ -160,22 +160,23 @@
             }
         }
         .footer {
-            background-color: #ffffff;
-            text-align: right;
+            background-color: #f8f8f800;
+            align-items: flex-start;
+            display: flex;
             padding: 0%;
-            position: relative; /* Change to relative to avoid overlap */
+            position: fixed; /* Change to relative to avoid overlap */
             width: auto;
             bottom: 0;
-            max-height: 5vh; /* Allow the height to adjust to content */
-            margin-top: 20px; /* Add space above the footer */
-            padding-right: 5%;
-            padding-bottom: 5%;
+            max-height: 8vh; /* Allow the height to adjust to content */
+            margin-top: 0%; /* Add space above the footer */
+            padding-right: 0%;
+            padding-bottom: 02%;
+            padding-left: 90%;
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
-            height: 10vh; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align the image vertically with the text */
-            margin-right: 10px; /* Add space between the image and text */
+            height: 8vh; /* Maintain aspect ratio */
+            margin-right: 5%; /* Add space between the image and text */
         }
         .hover-box {
             display: none;
