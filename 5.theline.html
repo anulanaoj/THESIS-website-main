@@ -67,22 +67,20 @@
             width: 50%;
         
         }
-    
-        .container {
-            flex-direction: column;
+        .container0 {
             display: flex;
+            flex-direction: column;
             align-items: left;
             justify-content:left;
             margin: 0;
             padding: 0%;
-            height: 100vh;
+            height: 120vh;
             width: auto; /* Adjust the height as needed */
             position: relative;
-            margin-top: 15%;
-            
+            margin-top: 0%;
             
         }
-        .container p {
+        .container0 p {
             font-size: 0.8em;
             color: #333;
             text-align: left;
@@ -94,39 +92,77 @@
             width: 35%;
             font-weight: lighter;
         }
-        .container img {
+        .container0 img {
             max-width: 30%;
             height: auto;
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
             padding-left: 50%;
+            padding-top: 10;
             transform: translateX(0%);
+        }
+    
+        .container {
+            flex-direction: column;
+            display: flex;
+            align-items: left;
+            justify-content:left;
+            margin: 0;
+            padding: 0%;
+            height: 130vh;
+            width: auto; /* Adjust the height as needed */
+            position: relative;
+            margin-top: 0%;
+            
+            
+        }
+        .container p {
+            font-size: 0.8em;
+            color: #333;
+            text-align: left;
+            text-align: justify;
+            padding-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            z-index: 2;
+            position: relative;
+            width: 45%;
+            font-weight: lighter;
+        }
+        .container img {
+            max-width: 45%;
+            height: auto;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
+            overflow: hidden; /* Hides any part of the image outside the container */
+            padding-left: 10%;
+            padding-top: 0%;
+            transform: translateX(0%);
+            position: relative;
         }
         
         .image3 {
             position: relative;
-            top: 0;
-            left: 0;
-            max-width: 100%;
+            padding-left: 10%;
+            max-width: 45%;
             height: auto; /* Adjust the height as needed */
             z-index: 1; /* Ensures the image is behind the text */
             display: flex;
             justify-content: left;
             align-items: left;
-            left: 20%;
-            top: 10%;
             transform: translateX(-0%);
         }
         .image3 img {
-            max-width: 40%;
+            max-width: 100%;
             height: auto;
             object-fit: cover;
             position: relative;
             display: flex;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
-            padding-top: 10%;
+            padding-top:5%;
+            padding-bottom: 20%;
         }
     
         .hover-box {
@@ -161,16 +197,16 @@
             }
 
         .images4 {
-            max-width: 50%;
+            max-width: 45%;
             position: relative;
             margin: 0;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Two equal columns */
             gap: 0; /* Removes spacing between grid items */
-            margin-left: 20%;
+            margin-left: 10%;
             margin-top: 0%;
-            padding-top: 20%;
+            padding-top: 0%;
             
                   
         }
@@ -186,7 +222,7 @@
         }
         
         .image5 {
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
@@ -200,10 +236,12 @@
         .image5 img {
             max-width: 50%;
             padding-left: 0%;
-            padding-top: 01%;
+            padding-top: 0%;
             object-fit: cover;
             clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
             overflow: hidden; /* Hides any part of the image outside the container */
+            position: relative;
+           
         }
         
         /* Style for the modal */
@@ -279,7 +317,7 @@
         <h1>5. The line</h1>
         <img src="5/line intro.jpg" alt="">
     </div>
-    <div class="container">
+    <div class="container0">
             <p>When I close my eyes and focus on my body, when I focus on my fingertips, on my nails, on the space between my fingers, when I think of my wrists, I feel the blood flowing through them. I feel my arms and I feel where my lower arm touches my upper arm. I feel where this upper arm touches my shoulder and so on. I close my eyes, but I see my body. I feel my body and I perceive the edges of it as I perceive where it touches itself. Where it touches itself, there are tension points which make the physicality of my own body apparent to me.
             <br><br>I urge you to do the same. Close your eyes. And feel your skin. If you feel your skin, you can trace your volume in your head. You can identify the space you occupy, and if you open your eyes, you can put it in relation to the space you don't occupy. And in this way, gather some sensibility on your self-perception and the perception that you have of the world. When doing this exercise, you are not closed to the world, you still feel the air around you. You may hear some noise outside. But your range is very limited. And when it's not limited, it's mostly imagination that the sounds or smells suggest.
             To self-ingrain. Is to wear yourself like a glove. And feel its material touch you.
@@ -318,32 +356,30 @@
             The flesh is the intertwining of the sensible and the sentient, the place where the body does not simply observe the world from a detached position but is felt within it.
             <br>
             <br>
-        </p>
-            
-        <div class="image5">
-            <img src="5/background image.jpg" alt="">
-    </div>
-    </div>
+        </p>            
+        <img src="5/background image.jpg" alt="">
+        </div>    
+      
+    
     <div class="container">
-        <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.
-        </p>
         <div class="images4">
             <img src="5/integrating-1.jpg" alt="Image 1" class="clickable-image">
             <img src="5/integrating-2.jpg" alt="Image 2" class="clickable-image">
         </div>
+        <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.
+        </p>
+        <p>This was shown to me while in the car, my eyes stuck on the top of naked trees. The clouds touched them without overlapping the defined upright lines coming from their torsos. I had the impression these lines were soft, like cotton, and if I brushed my face against them it would be as eyelashes are in a butterfly kiss. Softness was a sensation felt. I felt the brushing of the tops of the trees on the air, with the fast pace of the car. The trees continued and transformed into a concise line. It may have been by some absolute want that I felt the trees touch wind, or the car tires touching cement, but the feeling was felt regardless. <br>
+            To inhabit one's flesh is to go exist within the chiasm. So, the call to be conscious of touch, to interact, is a call to acknowledge sensation. The flesh, as the site of this interaction, does not belong to the individual alone; it is the medium through which the world manifests itself. To touch oneself is to touch the world, and to touch the world is, inevitably, to be touched in return.</p>
+        </div>
+
+        <p>here add image of drawing with a lot of vertical hands making a horizontal line</p>
+        
     </div>
     <div id="image-modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-image">
     </div>
     
-    <div class="container">
-        
-            <p>This was shown to me while in the car, my eyes stuck on the top of naked trees. The clouds touched them without overlapping the defined upright lines coming from their torsos. I had the impression these lines were soft, like cotton, and if I brushed my face against them it would be as eyelashes are in a butterfly kiss. Softness was a sensation felt. I felt the brushing of the tops of the trees on the air, with the fast pace of the car. The trees continued and transformed into a concise line. It may have been by some absolute want that I felt the trees touch wind, or the car tires touching cement, but the feeling was felt regardless. <br>
-            To inhabit one's flesh is to go exist within the chiasm. So, the call to be conscious of touch, to interact, is a call to acknowledge sensation. The flesh, as the site of this interaction, does not belong to the individual alone; it is the medium through which the world manifests itself. To touch oneself is to touch the world, and to touch the world is, inevitably, to be touched in return.</p>
-        </div>
-
-        <p>here add image of drawing with a lot of vertical hands making a horizontal line</p>
         <div class="footer">
             <a href="6.outline.html" 
             style="text-decoration: none; color: black;" 
