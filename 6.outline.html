@@ -17,18 +17,12 @@
             overflow-x: hidden;
             box-sizing: border-box;
         }
-        .spacing {
-            position: relative;
-            height: 20vh;
-            width: 100vw; /* Adjust the height as needed */
-            background-color: lch(100% 0.01 296.81);
-        }
         .header {
             position: relative;
             display: flex;
             align-items: left;
-            height: 10vh;
-            width: 100vw; /* Adjust the height as needed */
+            height: 20vh;
+            width: 100%; /* Adjust the height as needed */
             color: #000000;
             padding-left: 0;
             padding-top: 0;
@@ -38,70 +32,26 @@
             font-size: 2em;
             color: #000000;
             text-align: left;
-            padding-left: 40%;
-            margin-top: 3%;
+            padding-left: 10%;
+            padding-top: 5%;
+            margin-top: 0%;
             z-index: 2;
             position: absolute;
             width: 100%;
             font-weight: lighter;
         }
         
-        .container {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: 0%;
-            margin: 0%;
-            height: 80vh;
-            width: 100vw; /* Adjust the height as needed */;
-            align-items: left;
-            justify-content: left;
-            background-color: lch(100% 0.01 296.81);
-        }
-        .container img {
-            position: absolute;
-            max-width: 20vw;
-            height: auto;
-            margin: 0;
-            padding-top: 7%;
-            padding-left: 13%;
-            object-fit: cover;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            z-index: 1;
-        }
-        .container p {
-            position: relative;
-            max-width: 40%;
-            height: auto;
-            margin: 0;
-            padding-left: 35%;
-            padding-top: 10%;
-            font-size: 1em;
-            color: #333;
-            text-align: justify;
-            z-index: 2;;
-        }
-
-        .container p span {
-            font-size: 1em;
-            color: #201d19;
-            font-weight: normal;
-
-        }
+        
         .containerx {
             position: relative;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: 0%;
-            margin: 0%;
-            height: 30vh;
-            width: 100vw; /* Adjust the height as needed */;
-            align-items: left;
-            justify-content: left;
+            flex-direction: column;
+            padding: 5%;
+            margin-top: 5%; /* Add spacing above */
+            width: 100%;
+            height: auto;
             background-color: lch(100% 0.01 296.81);
+            overflow: hidden;
         }
         .containerx p {
             position: relative;
@@ -116,24 +66,24 @@
             z-index: 2;;
         }
         .footer {
-            background-color: #ffffff;
-            text-align: right;
+            background-color: #f8f8f800;
+            align-items: flex-start;
+            display: flex;
             padding: 0%;
-            position: relative; /* Change to relative to avoid overlap */
+            position: fixed; /* Change to relative to avoid overlap */
             width: auto;
             bottom: 0;
-            max-height: 5vh; /* Allow the height to adjust to content */
-            margin-top: 20px; /* Add space above the footer */
-            padding-right: 5%;
-            padding-bottom: 5%;
+            max-height: 8vh; /* Allow the height to adjust to content */
+            margin-top: 0%; /* Add space above the footer */
+            padding-right: 0%;
+            padding-bottom: 02%;
+            padding-left: 90%;
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
-            height: 10vh; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align the image vertically with the text */
+            height: 8vh; /* Maintain aspect ratio */
             margin-right: 10px; /* Add space between the image and text */
         }
-
 
 
         .hover-box {
@@ -205,7 +155,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-        .clickable-image {
+        .clickable {
         
             transition: transform 0.2s; /* Animation for zoom effect */
             cursor: url('./click.png'), auto; /* Ensure the file is in the same directory as the HTML file */
@@ -230,6 +180,23 @@
             transition: transform 0.2s; /* Animation for zoom effect */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack content vertically */
+            }
+
+            .containerx {
+                padding: 10%; /* Adjust padding for smaller screens */
+            }
+        }
+        .spacing {
+            display: inline-block;
+            width: 100%;
+            height: 20%;
+            margin: 0;
+            padding: 0;
+        }
         </style>
 </head>
 <body>
@@ -237,29 +204,59 @@
         <h1>6.Outline</h1>
     </div>
     <div class="container">
-        <img src="6/1.jpg" alt="Outline Image">
+        
+                <div class ="imagecolumn">
+                <img src="6/outline-2.jpg">
+                
+                </div>
+           <div class="textcolumn">
         <p>As I feel a tingling in my right arm, unsure if some illness has reached me, if I am more awake to bodily sensations or if my mind copes with some external nuisance not yet recognized. It is an ant farm sensation, I worry of my circulation, maybe I’ll become an amputee in which case a tragic story of an artist searching for touch loses it in efforts of reconnection.
-            <br>
+            <br><br>
             Efforts in the studio. What I will call, for now, exercises of delineating oneself on a surface, as a form of direct reflection – as a shadow is – that makes possible the seeing of the body as a space occupying form, outside of the unforgiving first person perspective. To see yourself from outside through a delineating of your physical body is never to see yourself from outside, but it certainly gives clues to it.
-            <br>
-            As a motivating factor I give you my own memory of when I was seeing the world with a horizon at one meter twenty or so. I would sit down on a chair and try to understand how much space I am occupying by feeling the edges of my body touch the chair, as well as seeing others around me with a similar size as reference for my understanding. It brought me a sense of materiality I could trust, some self-comforting reached. I’d stand up and look at the chair and imagine the negative space of the body there. Now, my memory is that of a chair but I notice it is a re-occurring processing – it happens as I stand in a room,
-            you can calculate your measurements by noticing your distance from the walls and ceiling, you can do it walking in the street by looking at your shadow, and you can, as I show you, trace your body as it is on a surface and step away from it.
-            <br>
-            <br>
-            <br>
-            The process of these outlines is a literal one, that searches for the middle point of view between the “as it is” and the “as it is perceived” through the flattening of volume. The outlines delineate space, and simplify it in this way. They are reductions and traces of volume. At the same time, they are lines – directly related to touch.</p>
-            <br>        
-        </p>
+            <br></p>
+            
+           </div>
     </div>
     <div class="container">
-        <img src="6/2.jpg">
-        <p>When making the work I stand on the canvas which rests on the floor. The first instinct is to join its rest and feel my body as I feel the woven-ness of the fabric. Something tight which lets air go through it. We are impermeable as a rain coat unless we consider our entrances as such. There is a whole procession to let the environment touch us from the inside. Air has its way of entering us and I search for a way to do the same. As if oxygen would go anywhere but the lungs, that is how it feels. Organs touch each other, organs share space which I tend to feel. Overwhelmingness which forces me to stop the outside and continue on the inside. I feel them be when I can’t feel my hands anymore.
-            <br>
-            <br>
-            The acts are attempts of sensing the edges of the body. That if felt, make apparent through contrast, the difference between the body and its environment. The difference IS the space between the two. The space which I’ve reduced as a line. The line is, in this document, a reduced interpretation of the space that outlines characters of/and the world. Its application in the drawings comes in sizes proportional to the hand or to the body, firstly as a tracing of investigatory movements and poses, and afterwards as assumed lines, thought of and chosen. Often chosen by re-assuming the traced position and sensing points of bodily tension.
-            <br>
-        </p>
+        <div class="imagecolumn">
+            <img src="6/outline-3.jpg">
+        </div>
+        <div class="textcolumn">
+            <p>
+                As a motivating factor I give you my own memory of when I was seeing the world with a horizon at one meter twenty or so. I would sit down on a chair and try to understand how much space I am occupying by feeling the edges of my body touch the chair, as well as seeing others around me with a similar size as reference for my understanding. It brought me a sense of materiality I could trust, some self-comforting reached. I’d stand up and look at the chair and imagine the negative space of the body there. Now, my memory is that of a chair but I notice it is a re-occurring processing – it happens as I stand in a room,
+                you can calculate your measurements by noticing your distance from the walls and ceiling, you can do it walking in the street by looking at your shadow, and you can, as I show you, trace your body as it is on a surface and step away from it.
+                <br>
+                <br>
+                <br>
+            </p>
+        </div>
     </div>
+        <div class="container">
+            <div class="imagecolumn">
+                <img src="6/outline-5.jpg">
+            </div>
+            <div class="textcolumn">
+                <p>
+                The process of these outlines is a literal one, that searches for the middle point of view between the “as it is” and the “as it is perceived” through the flattening of volume. The outlines delineate space, and simplify it in this way. They are reductions and traces of volume. At the same time, they are lines – directly related to touch.
+                <br> <br>        
+                When making the work I stand on the canvas which rests on the floor. The first instinct is to join its rest and feel my body as I feel the woven-ness of the fabric. Something tight which lets air go through it. We are impermeable as a rain coat unless we consider our entrances as such. There is a whole procession to let the environment touch us from the inside. Air has its way of entering us and I search for a way to do the same. As if oxygen would go anywhere but the lungs, that is how it feels. Organs touch each other, organs share space which I tend to feel. Overwhelmingness which forces me to stop the outside and continue on the inside. I feel them be when I can’t feel my hands anymore.
+                    <br>
+                    <br>
+                    The acts are attempts of sensing the edges of the body. That if felt, make apparent through contrast, the difference between the body and its environment. The difference IS the space between the two. The space which I’ve reduced as a line. The line is, in this document, a reduced interpretation of the space that outlines characters of/and the world. Its application in the drawings comes in sizes proportional to the hand or to the body, firstly as a tracing of investigatory movements and poses, and afterwards as assumed lines, thought of and chosen. Often chosen by re-assuming the traced position and sensing points of bodily tension.
+                    <br>
+                </p>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+  
     <div class="containerx">
         <p class="hover-text">
             INCLUDE IIMAGE OF ME INSIDE OUTLINED SHAPE
@@ -273,15 +270,12 @@
     </div>
     <div class="containerx">
         <p>
-            <a href="6..Transcript.html" style="text-decoration: none; color: #c12300;" 
+            <a href="6..Transcript.html" style="text-decoration: none; color: #c12300;" class="clickable"
                onmouseover="this.style.color='black';" 
                onmouseout="this.style.color='#bdc63b';">
                 With intentions of holding my own hand during the tracing actions, I’ve recorded myself doing so, or recorded my thoughts, spoken, on my movements. The one shown to you has a duration of forty three minutes and goes through my instinctual movements, as well as thought-of ones, my choices and points of interest while delineating myself. It is added to this document as elucidating material on my approach to seeing the line as such.
             </a>
         </p>
-    </div>
-    <div class="container">
-        <img src="6/3.jpg">
     </div>
     <div class="footer">
         <a href="0.OnTouch,.html" 
