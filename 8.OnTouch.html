@@ -16,22 +16,12 @@
             padding: 0;
             font-family: 'Century Schoolbook', serif;
             overflow-x: hidden;
-            height: 100%; /* Ensure the body takes the full height of the viewport */
+            width: 100vh; /* Ensure the body takes the full height of the viewport */
+            height: auto; /* Ensure the body takes the full height of the viewport */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
 }
 
-        .background-video {
-            position: fixed; /* Fix the video in the background */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1; /* Place the video behind the content */
-            cursor: pointer;
-            pointer-events: auto; /* Allow pointer events on the video */
-        }
 
         .container {
             position: relative;
@@ -42,7 +32,7 @@
             margin: 0 auto;
             line-height: 1.6;
             align-items: left;
-            display: flex;
+            
 
         }
 
@@ -56,7 +46,9 @@
             text-align: left;
             text-align: justify;
             width: 40%;
+            height: auto;
             font-weight:lighter;
+
 
         }
         .footer {
