@@ -125,19 +125,15 @@
         }
         
         .footer {
-            background-color: #ffffff00;
-            align-items: flex-start;
+            background-color: #f8f8f800;
             display: flex;
-            padding: 0%;
-            position: fixed; /* Change to relative to avoid overlap */
-            width: auto;
+            justify-content: space-between; /* Align items to opposite sides */
+            align-items: center; /* Vertically center the content */
+            position: fixed;
+            width: 99%; /* Ensure the footer spans the full width */
             bottom: 0;
-            max-height: 8vh; /* Allow the height to adjust to content */
-            margin-top: 0%; /* Add space above the footer */
-            padding-right: 0%;
-            padding-bottom: 02%;
-            padding-left: 90%;
-            z-index: 10;
+            padding: 1%; /* Add some horizontal padding */
+            max-height: 8vh; /* Adjust height as needed */
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
@@ -277,12 +273,18 @@
         </div>
 
     <div class="footer">
-      <a href="2.Humidity.html" 
-      style="text-decoration: none; color: black;" 
-      onmouseover="this.style.color='white';" 
-      onmouseout="this.style.color='black';">
-      <img src="next.png" alt="Footer Image">
-      </a>
+        <a href="index.html" 
+        style="text-decoration: none; color: black;" 
+        onmouseover="this.style.color='white';" 
+        onmouseout="this.style.color='black';">
+        <img src="back.png" alt="Footer Image">
+       </a> 
+           <a href="0.OnTouch,.html" 
+           style="text-decoration: none; color: black;" 
+           onmouseover="this.style.color='white';" 
+           onmouseout="this.style.color='black';">
+           <img src="next.png" alt="Footer Image">
+        </a>
     </div>
     
     

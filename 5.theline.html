@@ -149,54 +149,7 @@
             display: block;
             }
 
-        .images4 {
-            max-width: 45%;
-            position: relative;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-            gap: 0; /* Removes spacing between grid items */
-            margin-left: 10%;
-            margin-top: 0%;
-            padding-top: 0%;
-            
-                  
-        }
-        .images4 img {
-            max-width: 100%; /* Ensure images fit within their grid cells */
-            height: auto;
-            object-fit: cover;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            padding-left: 0%; 
-            transform: translateX(0%);
-
-        }
-        
-        .image5 {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1; /* Ensures the image is behind the text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateX(-05%);
-        }
-        .image5 img {
-            max-width: 50%;
-            padding-left: 0%;
-            padding-top: 0%;
-            object-fit: cover;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            position: relative;
-           
-        }
-        
+     
         /* Style for the modal */
         .modal {
             display: none; /* Hidden by default */
@@ -246,17 +199,14 @@
         }
         .footer {
             background-color: #f8f8f800;
-            align-items: flex-start;
             display: flex;
-            padding: 0%;
-            position: fixed; /* Change to relative to avoid overlap */
-            width: auto;
+            justify-content: space-between; /* Align items to opposite sides */
+            align-items: center; /* Vertically center the content */
+            position: fixed;
+            width: 99%; /* Ensure the footer spans the full width */
             bottom: 0;
-            max-height: 8vh; /* Allow the height to adjust to content */
-            margin-top: 0%; /* Add space above the footer */
-            padding-right: 0%;
-            padding-bottom: 02%;
-            padding-left: 90%;
+            padding: 1%; /* Add some horizontal padding */
+            max-height: 8vh; /* Adjust height as needed */
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
@@ -349,12 +299,18 @@
     </div>
     
         <div class="footer">
-            <a href="6.outline.html" 
-            style="text-decoration: none; color: black;" 
-            onmouseover="this.style.color='white';" 
-            onmouseout="this.style.color='black';">
-            <img src="next.png" alt="Footer Image">
-         </a>
+            <a href="4.islandness.html" 
+     style="text-decoration: none; color: black;" 
+     onmouseover="this.style.color='white';" 
+     onmouseout="this.style.color='black';">
+     <img src="back.png" alt="Footer Image">
+    </a> 
+        <a href="0.OnTouch,.html" 
+        style="text-decoration: none; color: black;" 
+        onmouseover="this.style.color='white';" 
+        onmouseout="this.style.color='black';">
+        <img src="next.png" alt="Footer Image">
+     </a>
             
           </div>
      
