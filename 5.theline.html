@@ -18,13 +18,6 @@
             box-sizing: border-box;
             
         }
-
-        .spacing {
-            position: relative;
-            height: 20vh;
-            width: 100vw; /* Adjust the height as needed */
-            background-color: lch(100% 0.01 296.81);
-        }
         .header {
             display: flex;
             flex-direction: row;
@@ -56,115 +49,75 @@
             overflow: hidden; /* Hides any part of the image outside the container */
             
         }
-        .centeredtext {
-            font-size: 0.9em;
-            color: #333;
-            text-align: justify;
-            padding-left: 20%;
-            margin-top: 25%;
-            z-index: 2;
-            position: absolute;
-            width: 50%;
-        
-        }
-        .container0 {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            justify-content:left;
-            margin: 0;
-            padding: 0%;
-            height: 120vh;
-            width: auto; /* Adjust the height as needed */
-            position: relative;
-            margin-top: 0%;
-            
-        }
-        .container0 p {
-            font-size: 0.8em;
-            color: #333;
-            text-align: left;
-            text-align: justify;
-            padding-left: 10%;
-            margin-top: 5%;
-            z-index: 2;
-            position: absolute;
-            width: 35%;
-            font-weight: lighter;
-        }
-        .container0 img {
-            max-width: 30%;
-            height: auto;
-            object-fit: cover;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            padding-left: 50%;
-            padding-top: 10;
-            transform: translateX(0%);
-        }
-    
         .container {
+            position: relative;
+            display: grid;
             flex-direction: column;
-            display: flex;
-            align-items: left;
-            justify-content:left;
-            margin: 0;
+            grid-template-columns: 1fr 2fr; /* Two columns */
             padding: 0%;
-            height: 130vh;
-            width: auto; /* Adjust the height as needed */
-            position: relative;
-            margin-top: 0%;
-            
-            
-        }
-        .container p {
-            font-size: 0.8em;
-            color: #333;
-            text-align: left;
-            text-align: justify;
-            padding-left: 10%;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            z-index: 2;
-            position: relative;
-            width: 45%;
-            font-weight: lighter;
-        }
-        .container img {
-            max-width: 45%;
+            margin-bottom: 5%; /* Add spacing below */
+            margin-left: 15%;
+            width: 100vw;
             height: auto;
-            object-fit: cover;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            padding-left: 10%;
-            padding-top: 0%;
-            transform: translateX(0%);
-            position: relative;
-        }
-        
-        .image3 {
-            position: relative;
-            padding-left: 10%;
-            max-width: 45%;
-            height: auto; /* Adjust the height as needed */
-            z-index: 1; /* Ensures the image is behind the text */
-            display: flex;
             justify-content: left;
             align-items: left;
-            transform: translateX(-0%);
         }
-        .image3 img {
+        .text {
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: 1fr 2fr; /* Two columns */
+            justify-content: left;
+            align-items: left;
+            padding-left: 10%;
             max-width: 100%;
             height: auto;
-            object-fit: cover;
-            position: relative;
-            display: flex;
-            clip-path: inset(0 0 0 0); /* Ensures the image is clipped to the container */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            padding-top:5%;
-            padding-bottom: 20%;
         }
-    
+        .text p {
+            width: 100%;
+            height: auto;
+            padding: 0%;
+            padding-left: 0%;
+            margin: 0%;
+            font-size: 1.1em;
+            font-weight: lighter;
+            color: #333;
+            text-align: justify;
+            z-index: 2;
+        }
+        .images1 {
+            display: grid;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            padding-left: 0%;
+            max-width: 25vw;
+            height: 70vh; /* Adjust the height as needed */
+            margin-left: 5%;
+            gap: 0; 
+        }
+        .images1 img {
+            max-width: 100%;
+            height: auto; /* Adjust the height as needed */
+            overflow: hidden; /* Hides any part of the image outside the container */
+            
+        }
+        .image {
+            display: flex;
+            margin: 0%;
+            padding-top: 0%;
+            max-width: 100%;
+            height: auto;
+            padding-left: 10%;
+            align-items: left;
+            grid-template-columns: 1fr 2fr; /* Two columns */
+            margin-top: 10%;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            padding: 0%;
+            margin-bottom: 5%;
+        }
         .hover-box {
             display: none;
             position: absolute;
@@ -317,7 +270,8 @@
         <h1>5. The line</h1>
         <img src="5/line intro.jpg" alt="">
     </div>
-    <div class="container0">
+    <div class="container">
+        <div class="text">
             <p>When I close my eyes and focus on my body, when I focus on my fingertips, on my nails, on the space between my fingers, when I think of my wrists, I feel the blood flowing through them. I feel my arms and I feel where my lower arm touches my upper arm. I feel where this upper arm touches my shoulder and so on. I close my eyes, but I see my body. I feel my body and I perceive the edges of it as I perceive where it touches itself. Where it touches itself, there are tension points which make the physicality of my own body apparent to me.
             <br><br>I urge you to do the same. Close your eyes. And feel your skin. If you feel your skin, you can trace your volume in your head. You can identify the space you occupy, and if you open your eyes, you can put it in relation to the space you don't occupy. And in this way, gather some sensibility on your self-perception and the perception that you have of the world. When doing this exercise, you are not closed to the world, you still feel the air around you. You may hear some noise outside. But your range is very limited. And when it's not limited, it's mostly imagination that the sounds or smells suggest.
             To self-ingrain. Is to wear yourself like a glove. And feel its material touch you.
@@ -327,15 +281,20 @@
                 <br><br><br><br>
                 The body delineated by itself creates a barrier which would be impenetrable if not for the senses and the ability to move. These allow the barriers to be penetrable, transformed into bridges between you and all other yous around. Our outline is the field where things touch, affect each other.</p>
             </p>
+        </div>
+        <div class="images1">
             <img src="5/IMG_1461-Edit copy.jpg">
             <img src="5/IMG_1453-Edit.jpg" alt="">
-        
-    </div>
-        <div class="image3">
+        </div>
+        <div class="image">
         <img src="5/5.2..jpg">
         </div>
+    </div>
     
+        
+   
     <div class="container">
+        <div class="text">
         <p class="hover-text">
         As I drink from a mug, I touch it once when to hold it, touch it twice with my lips. But only when I drink from it there is a sensible interaction. Although it is not the mug that goes inside of me, it is what informs the sensation to be. Between the drink and my body there is the mug. I put weight on this act due to feeling the cold drink telling the shape of my own oesophagus, and then of whatever follows. This happens because of the interaction  between the drink and my body. And gain a sense of my internal composition, as a drawing, through its felt outlining. The (out/in)line is felt through contrast.
         <br><br><br>
@@ -346,34 +305,43 @@
                    “The spreading out, especially in the case of a short, straight line, bears a relation to the growing point. Here, too, the question "When does the line as such die out, and at what moment is a plane born?", remains without a definite answer. How shall the question "Where does the river stop and the sea begin?", be answered?” P.90. Point line plane K.
                 </span>
             </span>
-       
-            <br>
-            <br>
-            The line is only known when entered as a space with its own delineation.
+            </p>
+        </div>
+        </div>
+        <div class="container">
+            <div class="image">
+        <img src="5/background image.jpg" alt="">
+            </div> 
+        </div> 
+        <div class="container"> 
+            <div class="text">
+            <p>The line is only known when entered as a space with its own delineation.
             <br>
             As our line is, I believe so to be Merleau-Ponty’s concept of the flesh, defending undifferentiation of object and subject. In his later work, The Visible and the Invisible, he introduces flesh as an elemental fabric that precedes and enables perception. Flesh is neither just subjective or objective but constitutes the medium through which the world and the perceiving body meet and exchange. It is this exchange that allows visibility and tactility to be shared, forming a structure where seeing and being seen, touching and being touched, collapse into each other. This collapse constitutes what Merleau-Ponty refers to as the chiasm – a crisscrossing of experience where the boundaries between us and world, subject and object, dissolve into a field of reciprocal perception.
             <br><br>
             The flesh is the intertwining of the sensible and the sentient, the place where the body does not simply observe the world from a detached position but is felt within it.
             <br>
             <br>
-        </p>            
-        <img src="5/background image.jpg" alt="">
-        </div>    
-      
+        </p>
+        </div>
+        </div>  
+        
+                
+       </div>
     
     <div class="container">
-        <div class="images4">
-            <img src="5/integrating-1.jpg" alt="Image 1" class="clickable-image">
-            <img src="5/integrating-2.jpg" alt="Image 2" class="clickable-image">
-        </div>
+        <div class="text">
         <p>In this intertwining we are both within and outside ourselves, in dialogue with the world. Any idea of object as something separate from the subject is re-written from a monologue to dialogue; the two share each other, become constituted by each other. Self-ingraining—the act of feeling oneself from inside—is not a separatory act but one that asks for a way in, integration with the flesh.
         </p>
         <p>This was shown to me while in the car, my eyes stuck on the top of naked trees. The clouds touched them without overlapping the defined upright lines coming from their torsos. I had the impression these lines were soft, like cotton, and if I brushed my face against them it would be as eyelashes are in a butterfly kiss. Softness was a sensation felt. I felt the brushing of the tops of the trees on the air, with the fast pace of the car. The trees continued and transformed into a concise line. It may have been by some absolute want that I felt the trees touch wind, or the car tires touching cement, but the feeling was felt regardless. <br>
-            To inhabit one's flesh is to go exist within the chiasm. So, the call to be conscious of touch, to interact, is a call to acknowledge sensation. The flesh, as the site of this interaction, does not belong to the individual alone; it is the medium through which the world manifests itself. To touch oneself is to touch the world, and to touch the world is, inevitably, to be touched in return.</p>
-        </div>
+            To inhabit one's flesh is to go exist within the chiasm. So, the call to be conscious of touch, to interact, is a call to acknowledge sensation. The flesh, as the site of this interaction, does not belong to the individual alone; it is the medium through which the world manifests itself. To touch oneself is to touch the world, and to touch the world is, inevitably, to be touched in return.
+        </p>
+        </div>  
 
-        <p>here add image of drawing with a lot of vertical hands making a horizontal line</p>
-        
+        <div class="images4">
+            <img src="5/integrating-1.jpg" alt="Image 1" class="clickable-image">
+            <img src="5/integrating-2.jpg" alt="Image 2" class="clickable-image">
+        </div>      
     </div>
     <div id="image-modal" class="modal">
         <span class="close">&times;</span>
