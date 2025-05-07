@@ -40,7 +40,7 @@
             text-align: left;
             margin: 0;
             padding: 0;
-            padding-right:50%;	
+            padding-right:20%;	
             padding-top: 5%;
             font-weight: 10;
             position: relative;
@@ -48,13 +48,14 @@
             font-weight: lighter;
         }
         .header img {
-            max-width: 60%; /* Ensure the image doesn't exceed the container width */
+            max-width: 30%; /* Ensure the image doesn't exceed the container width */
             height: auto;
             padding: 0%;
             overflow: hidden;
             box-sizing: border-box;
             z-index: 1;
             position: relative;
+            
         }
         .container {
             position: relative;
@@ -87,6 +88,27 @@
             padding: 0%;
             margin-bottom: 5%;
             margin-top: 5%;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+        .images2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            margin: 0 auto; /* Center the grid horizontally */
+            padding-top: 0%;
+            max-width: 50vw;
+            height: auto;
+            padding-left: 0%;
+            align-items: center;
+            justify-items: center; /* Center images within the grid */
+            margin-bottom: 10%;
+            column-gap: 0; /* Remove space between columns */
+        }
+        .images2 img {
+            width: 100%;
+            height: auto;
+            padding: 0%;
+            margin-bottom: 0%;
+            margin-top: 0%;
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
         }
         .image {
@@ -160,61 +182,6 @@
             .hover-text:hover + .hover-box {
             display: block;
             }
-            .popup-box {
-                    display: none;
-                    position: fixed;
-                    top: 10%;
-                    left: 2%;
-                    width: 60vw;
-                    height: 80vh;
-                    background-color: #ffffff;
-                    z-index: 1000;
-                    overflow-y: auto;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-                    padding: 0;
-                    border-radius: 1px;
-                }
-
-                .popup-content {
-                    margin-bottom: 0px;
-                    margin-left: 0;
-                }
-                .popup-content img {
-                    max-width: 100%;
-                    margin: 0;
-                    padding: 0;
-                    object-fit:scale-down;
-                    clip-path: inset(0 0 0 0);
-                    overflow: hidden;
-                    box-sizing: border-box;
-                    margin: 0 auto;
-                    cursor: pointer;
-                }
-                .popup-content p {
-                    font-size: 0.9em;
-                    color: #ca5100;
-                    text-align: left;
-                    text-align: justify;
-                    padding-left: 05%;
-                    margin-top: 2%;
-                    margin-bottom: 0%;
-                    z-index: 2;
-                    position: relative;
-                    width: 80%;
-                    line-height: 1.1em;
-                }
-
-                .close-btn {
-                    position: fixed;
-                    bottom: 5%;
-                    left: 5%;
-                    padding: 10px 10px;
-                    background-color: #ba0000;
-                    color: #fff;
-                    border: none;
-                    border-radius: 1px;
-                    cursor: pointer;
-                }
                 .footer {
             background-color: #f8f8f800;
             display: flex;
@@ -282,8 +249,7 @@
             <div class="text">
                 <p>The landscape is made of, in the first plane, just the road, grey and strict. It then contrasts with the remaining planes- of grass, trees and mountains, green that can make you think you are predestined to only see one colour for the rest of your days. So much green you forget there is a sky.
             The sky is usually grey. The island welcomes an agglomerate of clouds which sometimes come down to say hello and confirm themselves by touching us in the skin. I’ve always had the desire to escape the car, open the door unharmed and go go go to the mountains. They appear closer than they are. Wanting to go there and hug the grass face down and breathe in the remaining drops left by humidity of the previous day’s rain.
-            The feeling of embeddedness is translatable to that of the characteristic humidity of the island – 
-            <span class="hover-trigger; clickable-content" onclick="openPopup()" style="color: orange;">orange is everywhere.</span>
+            The feeling of embeddedness is translatable to that of the characteristic humidity of the island – orange is everywhere.
                 Humidity affects our sense-hood, ingrains itself in our bones, gives us headaches. It is as some entity has entered us. It is as glue which un-differentiates the body from its surroundings. It limits felt distance to the environment because it embeds itself on anything inserted in said environment. A homogeneous being it is.
                 </p>
             </div>
@@ -291,27 +257,26 @@
                 <img src="2/PXL_20240727_173922115.jpg" alt="">
             </div>
             </div>
-                
-
-            <div id="popup" class="popup-box">
-                <div class="popup-content">
-                    <p>This object is my sibling, made for my head from cotton. It is a hat which covers the face. I’ve soaked it with means of having some visualization of an environment entering a body. I’ve found this way by putting aside my own desire to be this touca (hood) out of convenience. But there is the fear of copying, even though I would only do Ana Mendieta a continuation of her action, if I enter this stream it would take me too far without taking the slow steps you see in this document.
-                        <br>
-                        Slow steps so you notice how one becomes two, which really just means that two become one. (it is both at once). And this integration of movement, I see slowed down by dense atmospheres. As are the ones solidified by humidity. Humidity which makes the cold colder and the warm insufferable, it is tension you cut with the knife, without any discomfort. This is tension that secures you, hugs you so surely sometimes it enters you, you breath slow. You smell it enter you.
-                        <br>
-                        <br> What goes through us does so through walls. And you do smell it enter the wall you touch and feel wet. And clean your fingers on your already damp shirt. Your clothes merge with you, and you do so with the walls.</p>
-                        <div class="slideshow"></div>
-                        <p style="color: #000;">click click click</p>
-                            <img src="2/PXL_20240721_151934678.jpg" alt="" class="clickable-content" onclick="showNextImage(this)">
-                            <img src="2/PXL_20240721_152259032.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
-                            <img src="2/PXL_20240721_153341866.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
-                            <img src="2/PXL_20240721_153344577.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
-                            <img src="2/PXL_20240721_153715675.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
-                            <img src="2/PXL_20240721_153906343.jpg" alt="" style="display: none;" onclick="showNextImage(this)">
-                        </div>
-                
-                <button class="close-btn clickable-content" onclick="closePopup()">Close</button>
+            <div class="container">
+                <div class="text">
+                    <p>[This object is my sibling, made for my head from cotton. It is a hat which covers the face. I’ve soaked it with means of having some visualization of an environment entering a body. I’ve found this way by putting aside my own desire to be this hood, out of convenience. But there is the fear of copying, even though I would only do Ana Mendieta a continuation of her action, if I enter this stream it would take me too far without taking the slow steps you see in this document.
+                        <br><br>Slow steps so you notice how one becomes two, which really just means that two become one. (It is both at once). And this integration of movement, I see slowed down by dense atmospheres. As are the ones solidified by humidity. Humidity which makes the cold colder and the warm insufferable, it is tension you cut with the knife, without any discomfort. This is tension that secures you, hugs you so surely sometimes it enters you, you breath slow. You smell it enter you.  
+                        <br><br>What goes through us does so through walls. And you do smell it enter  the wall you touch and feel wet. And clean your fingers on your already damp shirt. Your clothes merge with you, and you do so with the walls.]
+                    </p>
+                    </div>
             </div>
+            <div class="images2">
+                            <img src="2/PXL_20240721_151934678.jpg" >
+                            <img src="2/PXL_20240721_152259032.jpg" >
+                            <img src="2/PXL_20240721_153341866.jpg" >
+                            <img src="2/PXL_20240721_153344577.jpg" >
+                            <img src="2/PXL_20240721_153715675.jpg" >
+                            <img src="2/PXL_20240721_153906343.jpg" >
+            </div>
+                        
+                
+                
+           
            
             
     
@@ -328,25 +293,7 @@
         onmouseout="this.style.color='black';">
         <img src="next.png" alt="Footer Image">
      </a>
-            
-          </div>
-
-<script>
-    function showNextImage(currentImage) {
-                                const images = currentImage.parentElement.querySelectorAll('img');
-                                let currentIndex = Array.from(images).indexOf(currentImage);
-                                currentImage.style.display = 'none';
-                                let nextIndex = (currentIndex + 1) % images.length;
-                                images[nextIndex].style.display = 'block';
-                            }
-        function openPopup() {
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
+    </div>
 </body>
 </html>
 
