@@ -16,11 +16,30 @@
             padding: 0;
             font-family: 'Century Schoolbook', serif;
             overflow-x: hidden;
-            width: 100vh; /* Ensure the body takes the full height of the viewport */
-            height: auto; /* Ensure the body takes the full height of the viewport */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-}
+            height: 100%; /* Ensure the body takes the full height of the viewport */
+            justify-content: left; /* Center horizontally */
+            align-items: left; /* Center vertically */
+        }
+        .header {
+            position: relative;
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: auto; /* Full height of the viewport */
+            z-index: 1; /* Behind the text */
+            padding: 2%;
+        }
+        .header h1 {
+            position: relative;
+            display: flex;
+            margin-top: 5%;
+            left: 20%;
+            font-size: 2em; /* Adjust font size as needed */
+            color: rgb(0, 0, 0); /* Text color */
+            text-align: left; /* Center the text */
+            font-weight: lighter;
+        }
 
 
         .container {
@@ -61,6 +80,7 @@
             bottom: 0;
             padding: 1%; /* Add some horizontal padding */
             max-height: 8vh; /* Adjust height as needed */
+            z-index: 100;
         }
         .footer img {
             width: auto; /* Adjust the size of the image as needed */
@@ -102,11 +122,11 @@
     </style>
 </head>
 <body>
- 
+    <div class="header">
+        <h1>8.On Touch,</h1>
+    </div>
     <div class="container">
-        <p>On Touch,
-        <br>
-        <br>
+        <p>
         <span class="hover-trigger">
         toca-te a ti eu toquei-me, toco-me<br>
         em vez de ti. dou-te tudo menos o toque. esse é meu e é denso e é verdade.<br>
@@ -169,6 +189,7 @@
         i will take your turn<br>
         i will be the weight and the paper<br>
         <br>
+        </p>
     </div>
     <div class="footer">
         <a href="7.Ienteryou.html" 

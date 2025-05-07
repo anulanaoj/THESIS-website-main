@@ -22,17 +22,34 @@
             height: 100%; /* Ensure the body takes the full height of the viewport */
         }
 
-
+        .container {
+            position: relative;
+            display: flex;
+            z-index: 1; /* Ensure the text is above the video */
+            padding: 0%;
+            max-width: 100vw;
+            max-height: 100vh;
+            margin: 0 auto;
+            line-height: 1.6;
+            align-items: left;
+        }
+        .container img {
+            width: 65%; /* Adjust the size of the image as needed */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align the image vertically with the text */
+            margin-right:0; /* Add space between the image and text */
+        }
 
         .footer {
             background-color: #ffffff;
             text-align: right;
+            position: fixed;
             padding: 0%;
             position: relative; /* Change to relative to avoid overlap */
             width: auto;
             bottom: 0;
             max-height: 10vh; /* Allow the height to adjust to content */
-            margin-top: 20px; /* Add space above the footer */
+            margin-top: 0; /* Add space above the footer */
             padding-right: 5%;
             padding-bottom: 5%;
         }
@@ -45,8 +62,10 @@
         </style>
 </head>
 <body>
-    <p>after finishing the whole process and chewing on it i will write a text to be shown before the poems where I reflect over the process and its meaning and conclusions.</p>
+    <div class="container">
+        <img src="end.jpg" alt="">
 
+    </div>
 
 
 
