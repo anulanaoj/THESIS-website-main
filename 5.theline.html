@@ -53,9 +53,8 @@
             position: relative;
             display: grid;
             flex-direction: column;
-            grid-template-columns: 1fr 2fr; /* Two columns */
             padding: 0%;
-            margin-bottom: 5%; /* Add spacing below */
+            margin-bottom: 1%; /* Add spacing below */
             margin-left: 15%;
             width: 100vw;
             height: auto;
@@ -65,15 +64,14 @@
         .text {
             display: flex;
             flex-direction: column;
-            grid-template-columns: 1fr 2fr; /* Two columns */
             justify-content: left;
             align-items: left;
-            padding-left: 10%;
+            padding-left: 0%;
             max-width: 100%;
             height: auto;
         }
         .text p {
-            width: 100%;
+            width: 50%;
             height: auto;
             padding: 0%;
             padding-left: 0%;
@@ -84,39 +82,24 @@
             text-align: justify;
             z-index: 2;
         }
-        .images1 {
-            display: grid;
-            flex-direction: column;
-            justify-content: left;
-            align-items: left;
-            padding-left: 0%;
-            max-width: 25vw;
-            height: 70vh; /* Adjust the height as needed */
-            margin-left: 5%;
-            gap: 0; 
-        }
-        .images1 img {
-            max-width: 100%;
-            height: auto; /* Adjust the height as needed */
-            overflow: hidden; /* Hides any part of the image outside the container */
-            
-        }
         .image {
             display: flex;
+            position: relative;
             margin: 0%;
-            padding-top: 0%;
-            max-width: 100%;
+            padding-top: 1%;
+            max-width: 50%;
             height: auto;
-            padding-left: 10%;
+            padding-left: 0%;
             align-items: left;
             grid-template-columns: 1fr 2fr; /* Two columns */
-            margin-top: 10%;
+            margin-top: 0%;
         }
         .image img {
             width: 100%;
             height: auto;
             padding: 0%;
             margin-bottom: 5%;
+            border: #000000 solid 0.5px;
         }
         .images4 {
             display: flex;
@@ -126,7 +109,7 @@
             padding-left: 0%;
             max-width: 50%;
             height: auto; /* Adjust the height as needed */
-            margin-left: 24%;
+            margin-left: 0%;
             margin-bottom: 5%;
             gap: 1%; 
         }
@@ -134,7 +117,7 @@
             max-width: 100%;
             height: auto; /* Adjust the height as needed */
             overflow: hidden; /* Hides any part of the image outside the container */
-            
+            border: #000000 solid 0.5px;
         }
         .hover-box {
             display: none;
@@ -199,10 +182,6 @@
             <br><br>The body delineated by itself creates a barrier which would be impenetrable if not for the senses and the ability to move. These allow the barriers to be penetrable, transformed into bridges between you and all other yous around. Our outline is the field where things touch, affect each other.
             </p>
         </div>
-        <div class="images1">
-            <img src="5/IMG_1461-Edit copy.jpg">
-            <img src="5/IMG_1453-Edit.jpg" alt="">
-        </div>
         <div class="image">
         <img src="5/5.2..jpg">
         </div>
@@ -237,6 +216,7 @@
         </p>
         </div>
         </div>
+        <div class="container">
     <div class="images4">
             <img src="5/integrating-1.jpg" alt="Image 1" class="clickable-image">
             <img src="5/integrating-2.jpg" alt="Image 2" class="clickable-image">

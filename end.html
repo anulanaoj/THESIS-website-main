@@ -19,7 +19,8 @@
             padding: 0;
             font-family: 'Century Schoolbook', serif;
             overflow-x: hidden;
-            height: 100%; /* Ensure the body takes the full height of the viewport */
+            height: 100vh; /* Ensure the body takes the full height of the viewport */
+            width: 100vw; /* Ensure the body takes the full width of the viewport */
         }
 
         .container {
@@ -30,13 +31,10 @@
             max-width: 100vw;
             max-height: 100vh;
             margin: 0 auto;
-            line-height: 1.6;
-            align-items: left;
         }
         .container img {
             width: 65%; /* Adjust the size of the image as needed */
             height: auto; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align the image vertically with the text */
             margin-right:0; /* Add space between the image and text */
         }
 
