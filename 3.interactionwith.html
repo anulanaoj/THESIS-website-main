@@ -61,7 +61,7 @@
             flex-direction: column;
             grid-template-columns: 1fr 2fr; /* Two columns */
             padding: 0%;
-            margin-bottom: 5%; /* Add spacing below */
+            margin-bottom: 0%; /* Add spacing below */
             margin-left: 0%;
             width: 100vw;
             height: auto;
@@ -99,7 +99,7 @@
             justify-content: center;
         }
         .image img {
-            width: 50%;
+            width: 65%;
             height: auto;
             padding: 0%;
             margin-bottom: 1%;
@@ -119,9 +119,85 @@
         .text p {
             width: 50%;
             height: auto;
+            padding-top: 5%;
+            padding-bottom:5% ;
+            padding-left: 0%;
+            margin: 0%;
+            font-size: 1.1em;
+            font-weight: lighter;
+            color: #333;
+            text-align: justify;
+            z-index: 2;
+        }
+        .special {
+            position: relative;
+            display: grid;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+            max-width: 100%;
+            height: auto;
+        }
+        .special p {
+            width: 40%;
+            height: auto;
+            padding: 0%;
+            padding-left: 25%;
+            margin: 0%;
+            font-size: 1.1em;
+            font-weight: lighter;
+            color: #6a8726;
+            text-align: justify;
+            z-index: 2;
+            margin-top: 2%;
+        }
+        .special img {
+            width: 20vw;
+            height: 100%;
+            padding: 0%;
+            margin-bottom: 0%;
+            margin-top: 0%;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+            border: #000000 solid 1px;
+            margin-left: 25%;
+        }
+        .special1 {
+            position: relative;
+            display: grid;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+            max-width: 100%;
+            height: auto;
+        }
+        .special1 p {
+            width: 40%;
+            height: auto;
+            padding: 4%;
+            padding-left: 25%;
+            margin: 0%;
+            font-size: 1.1em;
+            font-weight: lighter;
+            color: #6a8726;
+            text-align: justify;
+            z-index: 2;
+            margin-top: 2%;
+        }
+        .lines {
+            position: relative;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            height: auto;
+        }
+        .lines p {
+            width: 65%;
+            height: auto;
             padding: 0%;
             padding-left: 0%;
-            margin: 2%;
+            margin: 0%;
             font-size: 1.1em;
             font-weight: lighter;
             color: #333;
@@ -220,6 +296,7 @@
             position: relative;
             max-width: 30vw;
             cursor: pointer; /* Add cursor pointer to indicate interactivity */
+            
         }
         .slideshow-container img {
             width: 30%;
@@ -275,6 +352,7 @@
             padding: 0%;
             cursor: url('click.png'), auto; /* Replace with your image path */
             padding-left: 0%;
+            margin-bottom: 10%;
         }
         .slideshow-container2 img {
             padding: 0%;
@@ -301,17 +379,24 @@
     </div>
         <div class="container">
             <div class="text">
-            <p id="hover-text" class="hoverable">
+                <div class="special">
+                    <img src="3/PXL_20240727_173826963.jpg" alt="Interaction example">
+            <p>
                 Landscape is a selected area—objectified—of land that one looks at, not something, by designation, that one is part of. In the context of a landscape, a postcard, there is distance between person and place; it is a term that differentiates person, looker, from place, look-ee.<br><br>
             </p>
-                <img id="hover-image-1" src="3/PXL_20240727_173826963.jpg" alt="Interaction example">
+        </div>
+               
                     <p>Acts of interaction with these settings are meant to facilitate a conscious embodiment of the body itself  ,in order to take a step inside this landscape. It is by assuming the position of yourself within your borders that they dissipate and you become free to start touching the world. I propose the subject to come nearer to the object surrounding them, on the same plane. 
                         <br><br>If you put yourself on a different plane, you can’t touch the original one. We do not walk on nature, we walk in nature.  Acts done in the purview of this research, be them done in the island or in the studio, call for this merging of parts. A conciliation of the physical with the felt in efforts to shorten the distance with what is perceived (what is there) and what is felt (what is sensed).
-                        <br><br>Applying formal visual exercises as interactions with the world is a method of engaging. Interaction is a way of returning to what is there. This makes things in the world be closer to us, as well as allowing for a dialogue with it. You hear what is said to you, you acknowledge and participate. 
-                        <br><br>These happenings are opportunities for letting go of any hesitation involving contact with an exterior element. Fear of contact reinforces separation between self and world. But to make the external internal and the internal external, is to practice mutual transformation. By embracing interaction as a means of return, we allow ourselves to be shaped just as much as we shape what we encounter. The act of moving within the landscape, embodying it rather than observing, leads to a reconsideration of the boundaries that separate body and place. 
+                    </p>
+                    <div class="special">
+                        <img src="3/01.01.25.jpg" alt="Interaction example">
+
+            </div>
+                    <p>
+                        <br><br>Applying formal visual exercises as interactions with the world is a method of engaging. Interaction is a way of returning to what is there. This makes things in the world be closer to us, as well as allowing for a dialogue with it. You hear what is said to you, you acknowledge and participate. These happenings are opportunities for letting go of any hesitation involving contact with an exterior element. Fear of contact reinforces separation between self and world. But to make the external internal and the internal external, is to practice mutual transformation. By embracing interaction as a means of return, we allow ourselves to be shaped just as much as we shape what we encounter. The act of moving within the landscape, embodying it rather than observing, leads to a reconsideration of the boundaries that separate body and place. 
                         <br><br>If landscape is traditionally conceived as something to be looked at—a scene arranged before the viewer—then acts of insertion and interaction challenge this dynamic. In seeking conciliation between physical presence and affect, the distinction between what is perceived and what is felt begins to blur.
-                      </p>
-                <p id="hover-text" class="hoverable">This blurring extends to the notion of borders themselves. The body's perceived boundary shapes its relationship to the world.
+                        <br><br>This blurring extends to the notion of borders themselves. The body's perceived boundary shapes its relationship to the world.
                 </p>
                 <img id="hover-image-2" src="3/borders.png" alt="Interaction example">
             </div>
@@ -336,18 +421,21 @@
             <div class="image">
                 <img src="3/I think out loud with lines in the ground.jpg" alt="">
             </div>
-
             <div class="text">
+            <div class="lines">
             <p>I think out loud with painted lines on the ground, for their immediate appearance as lines and their proportion to our shared scale, they can be seen as bodies next to ours. They delineate space, instruct us on movement. The lines are of communication. The curiosity lies in how this interaction affects our perception of, and movement within space; in how these lines transform the aesthetic of our days. They are often not seen, for it is expected they would be there anyways, but there is rhythm in a cross path. It is a structural visual language built on our behaviour. It is either parallel or perpendicular to intuitive movement. It is parallel as an arrow indicating the way; Perpendicular, referencing either the implied restriction of movement to a certain area, or the visual contrast (texture) created by signifying lines, as for cut lines indicating parking spaces. It is with these collaborations in mind that I interact with the lines on the floor.
             </p> 
             </div>
         </div>
+        </div>
         <div class="container">
             <div class="text">
+                <div class="special1">
                 <p> 
         <span class="hover-trigger" >“My body as a visible thing is contained within the full spectacle. But my seeing body subtends this visible body, and all the visibles with it. There is reciprocal insertion and intertwining of one in the other. Or rather, if, as once again we must, we eschew the thinking by planes and perspectives, there are two circles, or two vortexes, or two spheres, concentric when I live naively, and as soon as I question myself, the one slightly decentered with respect to the other. . . .”
             <span class="hover-box"> Merleau-Ponty, Maurice. The Visible and the Invisible, Northwestern University Press, 1968. 138</span>
         </p>
+            </div>
             </div>
         </div>
         <div class="container">
@@ -357,15 +445,16 @@
             </div>
             <div class="text">
             <p>What is thought through the instrumental lines on the floor, a pretext, can be applied to thinking of an interaction between yourself and the counter-parts of the whole around. Seeing the elements which surround you in a specific environment, as possible interlocutors, is allowing for integration within this setting. It is a levelling of parts to the same plane, and a recognition of importance of both yourself, the object you interact with, and the environment that surrounds all of you. More fun is to be had in places you feel you belong to.  <br/> The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.
-            </p>
+            <br><br>The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world,<span style="color: #6a8726;"> and wish you do as well</span> , it is not so hard. As a re-occurrent character in my practice, I use my body as an example, or as a suggestion for movement and interaction. 
+                <br><br>I’ve been dancing in the supermarket. A meeting point. I feel more welcome to do so, no more strictness. I think of the public space, and how it is a shared one, where we are all invited to be but not to belong. Self-confinement looks a lot like a delineated space with a ‘no entry’ signalling. A little bit as having the space around you removed, you become a .png put on another layer of the landscape, be it in nature or an interior one, a public toilet. 
+                </p>
+                </div>
+                
+            <div class="container">
+                <div class="text">
+                    <p><span style="font-weight: light; font-size: 2em;">As I enter my bed, I leave my house in the morning. And I convince you and me I belong inside these sheets.</span>  
+                    </p>
             </div>
-        </div>
-        <div class="container">
-            <div class="text">
-            <p>The sense of belonging to the world is one I am chasing with my actions, some exemplify the idea, others apply it casually. I ease myself into the world, and wish you do as well, it is not so hard.
-                <br><br>As a re-occurrent character in my practice, I use my body as an example, or as a suggestion for movement and interaction. 
-                <br><br>I’ve been dancing in the supermarket. A meeting point. I feel more welcome to do so, no more strictness. I think of the public space, and how it is a shared one, where we are all invited to be but not to belong. Self-confinement looks a lot like a delineated space with a ‘no entry’ signalling. A little bit as having the space around you removed, you become a .png put on another layer of the landscape, be it in nature or an interior one, a public toilet. As I enter my bed, I leave my house in the morning. And I convince you and me I belong inside these sheets. 
-               </p></div>
             <div class="slideshow-container2">
                 <img id="slideshow-image" class="clickable" src="3/IMG_20250130_194445.jpg" alt="Slideshow Image">
             </div>
