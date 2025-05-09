@@ -244,14 +244,21 @@
                     overflow: hidden;
                     box-sizing: border-box;
                 }
-                
-                .clickable-content {
+                .clickable {
                     cursor: url(click.png), pointer; /* Custom pointer for specific elements */
                 }
                 
     </style>
 </head>
 <body>
+    <div id="fullscreen-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 1000;">
+        <img id="popup-image" src="" alt="Fullscreen Image" style="max-width: 90%; max-height: 80%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); border: 1px solid black;">
+        <div id="popup-description" style="position: absolute; top: 92%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; font-size: 1em; color: black;">
+            <!-- Description will be dynamically added here -->
+        </div>
+        <span id="prev-image" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+        <span id="next-image" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+    </div>
     <div class="header">
         <h1> 
             2.Humidity</a>
@@ -264,15 +271,15 @@
                     </p>
                 </div>
            <div class="images">
-                    <img src="2/10143879964_9ea91dd450_o.jpg" alt="">
-                    <img src="2/10144103803_c24aa8587c_o.jpg" alt="">
-                    <img src="2/10144097293_56e2e068c7_o.jpg" alt="">
+                    <img src="2/10143879964_9ea91dd450_o.jpg" alt=""class="clickable-image, clickable">
+                    <img src="2/10144103803_c24aa8587c_o.jpg" alt=""class="clickable-image, clickable">
+                    <img src="2/10144097293_56e2e068c7_o.jpg" alt=""class="clickable-image, clickable">
                     </div>
         </div>
                     
             <div class="container">
                 <div class="image">
-                    <img src="2/road.jpg" alt="">
+                    <img src="2/road.jpg" alt=""class="clickable-image, clickable">
                 </div>
             <div class="text">
                 <p>The landscape is made of, in the first plane, just the road, grey and strict. It then contrasts with the remaining planes- of grass, trees and mountains, green that can make you think you are predestined to only see one colour for the rest of your days. So much green you forget there is a sky.
@@ -280,7 +287,7 @@
             The feeling of embeddedness is translatable to that of the characteristic humidity of the island – orange is everywhere.
                 </p>
                 <div class="image">
-                    <img src="2/orange.jpg" alt="">
+                    <img src="2/orange.jpg" alt=""class="clickable-image, clickable">
                 </div>
                 <p>
                 Humidity affects our sense-hood, ingrains itself in our bones, gives us headaches. It is as some entity has entered us. It is as glue which un-differentiates the body from its surroundings. It limits felt distance to the environment because it embeds itself on anything inserted in said environment. A homogeneous being it is.
@@ -290,12 +297,12 @@
             </div>
             <div class="container">
             <div class="images2">
-                <img src="2/PXL_20240721_151934678.jpg" >
-                <img src="2/PXL_20240721_152259032.jpg" >
-                <img src="2/PXL_20240721_153341866.jpg" >
-                <img src="2/PXL_20240721_153344577.jpg" >
-                <img src="2/PXL_20240721_153715675.jpg" >
-                <img src="2/PXL_20240721_153906343.jpg" >
+                <img src="2/PXL_20240721_151934678.jpg" class="clickable-image, clickable" >
+                <img src="2/PXL_20240721_152259032.jpg" class="clickable-image, clickable">
+                <img src="2/PXL_20240721_153341866.jpg" class="clickable-image, clickable">
+                <img src="2/PXL_20240721_153344577.jpg" class="clickable-image, clickable">
+                <img src="2/PXL_20240721_153715675.jpg" class="clickable-image, clickable">
+                <img src="2/PXL_20240721_153906343.jpg" class="clickable-image, clickable">
 </div>
                 <div class="textlast">
                     <p>[This object is my sibling, made for my head from cotton. It is a hat which covers the face. I’ve soaked it with means of having some visualization of an environment entering a body. I’ve found this way by putting aside my own desire to be this hood, out of convenience. But there is the fear of copying, even though I would only do Ana Mendieta a continuation of her action, if I enter this stream it would take me too far without taking the slow steps you see in this document.
@@ -326,6 +333,7 @@
         <img src="next.png" alt="Footer Image">
      </a>
     </div>
+    <script src="popup.js"></script>
 </body>
 </html>
 

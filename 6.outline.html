@@ -309,6 +309,9 @@
             margin: 0;
             padding: 0;
         }
+        .clickable {
+            cursor: url('click.png'), pointer; /* Use custom cursor and fallback to pointer */
+        }
         </style>
 </head>
 <body>
@@ -322,7 +325,7 @@
         <p>As I feel a tingling in my right arm, </p><br>
            </div>
             <div class ="image">
-                <img src="6/outline-2.jpg">
+                <img src="6/outline-2.jpg"class="clickable-image, clickable">
                 </div>
            <div class="text">
         <p>unsure if some illness has reached me, if I am more awake to bodily sensations or if my mind copes with some external nuisance not yet recognized. <br>
@@ -339,7 +342,7 @@
     </div>
     <div class="container">
         <div class="image">
-            <img src="6/outline-3.jpg">
+            <img src="6/outline-3.jpg"class="clickable-image, clickable">
         </div>
         <div class="text">
             <p>As a motivating factor I give you my own memory of when I was seeing the world with a horizon at one meter twenty or so. I would sit down on a chair and try to understand how much space I am occupying by feeling the edges of my body touch the chair, as well as seeing others around me with a similar size as reference for my understanding. It brought me a sense of materiality I could trust, some self-comforting reached. I’d stand up and look at the chair and imagine the negative space of the body there. Now, my memory is that of a chair but I notice it is a re-occurring processing – it happens as I stand in a room, 
@@ -355,7 +358,7 @@
     </div>
         <div class="container">
             <div class="image">
-                <img src="6/outline-5.jpg">
+                <img src="6/outline-5.jpg"class="clickable-image, clickable">
             </div>
             <div class="text">
                 <p>The process of these outlines is a literal one, that searches for the middle point of view between the “as it is” and the “as it is perceived” through the flattening of volume. The outlines delineate space, and simplify it in this way. They are reductions and traces of volume. At the same time, they are lines – directly related to touch.
@@ -403,14 +406,16 @@
         onmouseout="this.style.color='black';">
         <img src="next.png" alt="Footer Image">
      </a>
-     
       </div>
-
-
-
-
-   
-
+      <div id="fullscreen-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 1000;">
+        <img id="popup-image" src="" alt="Fullscreen Image" style="max-width: 90%; max-height: 80%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); border: 1px solid black;">
+        <div id="popup-description" style="position: absolute; top: 92%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; font-size: 1em; color: black;">
+            <!-- Description will be dynamically added here -->
+        </div>
+        <span id="prev-image" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+        <span id="next-image" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+    </div>
+      <script src="popup.js"></script>
 </body>
 </html>
 ``` 

@@ -131,6 +131,9 @@
             .hover-text:hover + .hover-box {
             display: block;
             }
+            .clickable {
+            cursor: url('click.png'), pointer; /* Use custom cursor and fallback to pointer */
+        }
     </style>
 </head>
 <body>
@@ -206,7 +209,7 @@
         </p>
     </div>
     <div>
-        <video autoplay loop muted>
+        <video autoplay loop muted class="clickable-video clickable"  data-video-src="7.mp4">
             <source src="7.mp4" type="video/mp4">
         </video>
     </div>
@@ -225,5 +228,43 @@
         <img src="next.png" alt="Footer Image">
      </a>
     </div>
+    <div id="fullscreen-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 1000;">
+        <video id="popup-video" controls style="max-width: 90%; max-height: 80%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); border: 1px solid black;">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="popup-description" style="position: absolute; top: 92%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; font-size: 1em; color: black;">
+            <!-- Description will be dynamically added here -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("fullscreen-popup");
+    const popupVideo = document.getElementById("popup-video");
+    const popupDescription = document.getElementById("popup-description");
+    const videos = Array.from(document.querySelectorAll(".clickable-video"));
+
+    // Open popup when a video is clicked
+    videos.forEach((video) => {
+        video.addEventListener("click", () => {
+            const videoSrc = video.getAttribute("data-video-src");
+            const videoDescription = video.getAttribute("data-description") || "No description available";
+
+            popup.style.display = "block";
+            popupVideo.querySelector("source").src = videoSrc;
+            popupVideo.load(); // Reload the video with the new source
+            popupDescription.textContent = videoDescription;
+        });
+    });
+
+    // Close popup when clicking on the white background
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.style.display = "none";
+            popupVideo.pause(); // Pause the video when the popup is closed
+        }
+    });
+});
+    </script>
 </body>
 </html>

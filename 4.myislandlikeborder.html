@@ -229,6 +229,9 @@
             .hover-text:hover + .hover-box {
             display: block;
             }
+            .clickable {
+            cursor: url('click.png'), pointer; /* Use custom cursor and fallback to pointer */
+        }
     </style>
 </head>
 <body>
@@ -242,7 +245,7 @@
         </p>
             </div>
             <div class="image1">	
-                <img src="4/ilheu.png" alt="Ilhéu da Vila Franca do Campo">
+                <img src="4/ilheu.png" alt="Ilhéu da Vila Franca do Campo" class="clickable-image, clickable">
             </div>
             <div class="text">
             <p> 
@@ -257,7 +260,7 @@
     </div>
     <div class="container">
         <div class="image">
-            <img src="4/islandness.jpg" alt="Islandness Image">
+            <img src="4/islandness.jpg" alt="Islandness Image"class="clickable-image, clickable">
         </div>
         <div class="text">
             <p>I’ve grown affected by the restrictions of the island, delineated by a thick blue line. A solid appearance, as that of the land. (water is just fluid land). The sense of distance towards the world is an always present one, 
@@ -267,7 +270,7 @@
             <br></p>
         </div>
             <div class="image1">
-                <img src="4/crab.jpg" alt="Islandness Image">
+                <img src="4/crab.jpg" alt="Islandness Image"class="clickable-image, clickable">
             </div>
             <div class="text">
             <p>
@@ -298,7 +301,14 @@
      </a>
       </div>
 
-      
+      <div id="fullscreen-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 1000;">
+        <img id="popup-image" src="" alt="Fullscreen Image" style="max-width: 90%; max-height: 80%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); border: 1px solid black;">
+        <div id="popup-description" style="position: absolute; top: 92%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; font-size: 1em; color: black;">
+            <!-- Description will be dynamically added here -->
+        </div>
+        <span id="prev-image" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+        <span id="next-image" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+    </div>
     <script>
         const slides = document.querySelectorAll('.slides a img');
         let currentSlide = 0;
@@ -320,6 +330,7 @@
         // Show the first slide initially
         showSlide(currentSlide);
     </script>
+    <script src="popup.js"></script>
 </body>
 </html>
 

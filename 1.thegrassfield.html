@@ -242,7 +242,7 @@
         <p>The car had stopped, I believe some soundtrack was to change. I recommend you leave the car when it does so. I did so, company stayed. The field next to us was an empty one, empty postcard to be sent. I’ll go in turn of the cow. I am not shy but curious to take the place. Gave my camera, a pocket one, to my friend in the backseat, still seated, looking from behind the open window, inside.
         <br>
         </p>
-        <img src="1/1.field-02.jpg" alt="">
+        <img src="1/1.field-02.jpg" alt="" class="clickable-image, clickable">
         <p>Running uneasily through the field, humidity makes the green greener – possibility to slip is eminent – <i>and I stop</i>, informed by the image of my body being a small element inside the square photograph. This within imagination.<br/><br/>
             Once there, stayed with my back turned to the car. Not to remember where I had come from. Assuming this position, I turned from the lens to the landscape that brought me in to begin with. Once you reach the landscape, its whole is separated into parts. Ones as you are. The mountains were closer, but still further than an arms distance. Not to touch, to see. I understood their shape as my own. 
             <br><br>They are tall from where they look, but short from where I do. I became lower, can I appear through the grass as the mountains are covered with trees at their bottom? Only when coming closer you are under the tree. Stood up to hunch the spine. I imitate their round tops, I go along with the play with the horizon. Not flat. Again, I am you. And I move, unsure if the outline of my back will match that of the mountains, but having the sensation it does. Lastly, to form with my body formal disruption to the images, I went with my arms up, perpendicular to the horizon, arms copying the upright position of the torso. Stand up with your arms. Glue yourself to the world.
@@ -252,16 +252,14 @@
     </div>
         <div class="images">
             <div>
-            <img src="1/1.field-05.jpg" alt="">
-            <img src="1/1.field-04.jpg" alt="">
-            <img src="1/1.field-07.jpg" alt="">
-            
+            <img src="1/1.field-05.jpg" alt="A beautiful green field" class="clickable" data-description="This is a beautiful green field.">
+            <img src="1/1.field-04.jpg" alt="A serene mountain landscape" class="clickable" data-description="A serene mountain landscape with trees.">
+            <img src="1/1.field-07.jpg" alt="A vibrant meadow" class="clickable" data-description="A vibrant meadow with colorful flowers.">
             </div>
             <div>
-            <img src="1/1.field-09.jpg" alt="">
-            <img src="1/1.field-08.jpg" alt="">
-            <img src="1/1.field-11.jpg" alt="">
-            
+            <img src="1/1.field-09.jpg" alt="Rolling hills" class="clickable" data-description="Rolling hills under a clear blue sky.">
+            <img src="1/1.field-08.jpg" alt="A peaceful valley" class="clickable" data-description="A peaceful valley surrounded by mountains.">
+            <img src="1/1.field-11.jpg" alt="A lush forest" class="clickable" data-description="A lush forest with tall trees.">
             </div>
         </div>
         
@@ -274,6 +272,15 @@
               </p>
             </div>
         </div>
+
+    <div id="fullscreen-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 1000;">
+        <img id="popup-image" src="" alt="Fullscreen Image" style="max-width: 90%; max-height: 80%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); border: 1px solid black;">
+        <div id="popup-description" style="position: absolute; top: 92%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center; font-size: 1em; color: black;">
+            <!-- Description will be dynamically added here -->
+        </div>
+        <span id="prev-image" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+        <span id="next-image" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2em; color: black; cursor: pointer;">*</span>
+    </div>
 
     <div class="footer">
         <a href="index.html" 
@@ -290,7 +297,58 @@
         </a>
     </div>
     
-    
+    <script>
+        // JavaScript for handling the fullscreen popup and navigation
+        document.addEventListener("DOMContentLoaded", () => {
+            const popup = document.getElementById("fullscreen-popup");
+            const popupImage = document.getElementById("popup-image");
+            const popupDescription = document.getElementById("popup-description");
+            const prevImage = document.getElementById("prev-image");
+            const nextImage = document.getElementById("next-image");
+            const images = Array.from(document.querySelectorAll(".clickable"));
+            let currentIndex = -1;
+
+            // Open popup when an image is clicked
+            images.forEach((image, index) => {
+                image.addEventListener("click", () => {
+                    currentIndex = index;
+                    showImage();
+                });
+            });
+
+            // Show the current image and description in the popup
+            function showImage() {
+                if (currentIndex >= 0 && currentIndex < images.length) {
+                    popup.style.display = "block";
+                    popupImage.src = images[currentIndex].src;
+                    popupDescription.textContent = images[currentIndex].alt || "No description available";
+                }
+            }
+
+            // Navigate to the previous image
+            prevImage.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showImage();
+                }
+            });
+
+            // Navigate to the next image
+            nextImage.addEventListener("click", () => {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++;
+                    showImage();
+                }
+            });
+
+            // Close popup when clicking on the white background
+            popup.addEventListener("click", (e) => {
+                if (e.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
+        });
+    </script>
         
     </body>
     </html>
